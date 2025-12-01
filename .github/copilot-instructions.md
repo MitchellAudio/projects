@@ -7,17 +7,13 @@ This repository currently contains minimal documentation and no established proj
   - Each new project should include its own `README.md` and, if applicable, a `requirements.txt`, `package.json`, or other relevant manifest.
 
 - **Documentation:**
-  - The root `README.md` is currently empty. Add project-level documentation to each subproject.
+  - Add project-level documentation to each subproject.
   - If you create a new project, update the root `README.md` with a short description and a link to the subproject.
 
 - **Conventions:**
   - Use clear, descriptive directory and file names.
   - Prefer standard open-source project layouts (e.g., `src/`, `tests/`, `docs/`).
   - Place all configuration files (e.g., `.env`, `.gitignore`) at the project or subproject root as appropriate.
-
-- **Workflows:**
-  - There are no established build, test, or CI workflows yet. If you add them, document the commands in the subproject's `README.md`.
-  - Use standard tools for the language/framework (e.g., `pytest` for Python, `npm test` for Node.js).
 
 - **External Integrations:**
   - No external dependencies or integrations are currently defined. Document any you add in the relevant subproject.
