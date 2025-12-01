@@ -14,6 +14,7 @@ This repository currently contains minimal documentation and no established proj
   - Use clear, descriptive directory and file names.
   - Prefer standard open-source project layouts (e.g., `src/`, `tests/`, `docs/`).
   - Place all configuration files (e.g., `.env`, `.gitignore`) at the project or subproject root as appropriate.
+  - Attempt to use bullet points or numbered lists for clarity, avoiding long paragraphs.
 
 - **External Integrations:**
   - No external dependencies or integrations are currently defined. Document any you add in the relevant subproject.
