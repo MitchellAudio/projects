@@ -28,8 +28,8 @@
     _Start date 2025-11-27_
 - [ ] **Wireless Workbench**
         _Start date 2025-12-01_
-    - [ ] Level 1  
-        _Estimated time: 1 hour_
+    - [x] Level 1  
+        _Completion date 2025-12-11_
     - [ ] Level 2  
         _Estimated time: 1 hour_
     - [ ] Level 3  
