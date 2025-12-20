@@ -1,13 +1,21 @@
 
 # Certifications
 
-**Certifications Completed:** 5
-**Certifications In Progress:** 2  
-**Certifications In Backlog:** 7
+**Certifications Completed:** 6
+**Certifications In Progress:** 1 
+**Certifications In Backlog:** 6
 
 
 ## Completed
 
+- [x] **Wireless Workbench**
+        _Start date 2025-12-01_
+    - [x] Level 1  
+        _Completion date 2025-12-11_
+    - [x] Level 2  
+        _Completion date 2025-12-20_
+    - [x] Level 3  
+        _Completion date 2025-12-20_
 - [x] **CTS (Certified Technology Specialist)**  
     _Completion date 2025-09-06_
 - [x] **OSHA 30 (Occupational Safety and Health Administration)**  
@@ -26,14 +34,7 @@
 - [ ] **CCNA (Cisco Certified Network Associate)**  
     _Estimated time: 150 hours_
     _Start date 2025-11-27_
-- [ ] **Wireless Workbench**
-        _Start date 2025-12-01_
-    - [x] Level 1  
-        _Completion date 2025-12-11_
-    - [ ] Level 2  
-        _Estimated time: 1 hour_
-    - [ ] Level 3  
-        _Estimated time: 2 hours_
+
 
 ## Backlog
 

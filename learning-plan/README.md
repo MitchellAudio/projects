@@ -11,7 +11,6 @@ This directory contains structured learning plans, resources, and progress track
 - [ ] [Qos](Tech/Qos/)
 - [ ] [Broadcast Methods](Tech/Broadcast-methods/)
 - [ ] [Word Clock](Tech/Word-clock/)
-- [ ] [Impedance](Tech/Impedance/)
 - [ ] [Internal Wiring of Speakers](Tech/Internal-wiring-of-speakers/)
 - [ ] [Types of Microphone Patterns](Tech/Types-of-microphone-patterns/)
 - [ ] [ADC DAC Conversions](Tech/ADC-DAC-conversions/)
@@ -28,6 +27,7 @@ This directory contains structured learning plans, resources, and progress track
 - [ ] [Pro Tools](Software/Pro-tools/)
 - [ ] [Logic](Software/Logic/)
 - [ ] [Copilot](Software/Copilot/)
+- [ ] Cue Station
 
 ### Paperwork
 - [ ] [System Flow Diagram](Paperwork/System-flow-diagram/)
@@ -39,7 +39,7 @@ This directory contains structured learning plans, resources, and progress track
 - [ ] [Impedance](Electrics/Impedance/)
 - [ ] [240 Volt Power Distribution](Electrics/240-volt-power-distribution/)
 - [ ] [Isolated Transformer](Electrics/Isolated-transformer/)
-- [ ] [Single, 2, and 3 Phase Power](Electrics/Single-2-3-phase-power/)
+- [ ] [Single, 2, and 3 Phase Power](Electrics/Single-Vs-Three-Phase-Power/)
 - [ ] [AC vs DC](Electrics/AC-vs-DC/)
 
 ### Certifications
