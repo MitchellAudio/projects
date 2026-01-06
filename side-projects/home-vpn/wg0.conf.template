@@ -1,0 +1,14 @@
+# wg0.conf.template
+# Replace placeholders before copying to /etc/wireguard/wg0.conf
+
+[Interface]
+Address = 10.0.0.1/24
+ListenPort = 51820
+PrivateKey = <SERVER_PRIVATE_KEY>
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+# Example client entry — copy the client's PublicKey and set AllowedIPs appropriately
+#[Peer]
+#PublicKey = <CLIENT_PUBLIC_KEY>
+#AllowedIPs = 10.0.0.2/32

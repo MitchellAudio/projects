@@ -19,7 +19,7 @@
 ## Why hum appears
 
 - Ground loops and common‑mode currents: 
-    - Ground loop — multiple conductive paths between the same two equipment chassis or circuit reference points. Small voltage differences between earth points (caused by wiring resistance, stray magnetic fields, or nearby loads) produce circulating currents through cable shields and chassis, which show up as 50/60 Hz hum in audio circuits.
+	- Ground loop — multiple conductive paths between the same two equipment chassis or circuit reference points. Small voltage differences between earth points (caused by wiring resistance, stray magnetic fields, or nearby loads) produce circulating currents through cable shields and chassis, which show up as 60 Hz hum in audio circuits.
 - Signal vs power loops: Loops can exist in the signal domain (between audio gear via cable shields and multiple earth references) or in the power domain (different mains earth points between rack locations). 
     - Signal‑domain loops are often the cause, but power‑domain loops can also induce hum through shared chassis and connected equipment.
     - Signal-domain loops will not be solved with an isolated transformer.
