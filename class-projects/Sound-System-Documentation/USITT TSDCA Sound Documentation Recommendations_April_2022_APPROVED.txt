@@ -1,0 +1,1760 @@
+USITT/TSDCA SOUND DOCUMENTATION
+RECOMMENDED PRACTICE
+Presented by USITT & TSDCA
+Prepared under the leadership of:
+Josh Loar, Senior Consultant (AV): Charcoalblue
+In association with:
+Mike Backhaus, Sound Supervisor: Yale School of Drama / Yale Repertory Theatre
+Brad Berridge, Director of Sound Operations: Feld Entertainment, IATSE, USA 829
+Nicholas Drashner, Audio Experience Engineer: BoomCloud360
+Sam Kusnetz, Independent Sound & Projection Designer, USA 829
+Joanna Lynne Staub, Independent Sound Designer & Audio Engineer, IATSE, USA 829
+Brad Ward, Senior Associate: Auerbach Pollock Friedlander
+Disclaimer:
+The drawings contained in this set of recommendations are adapted from real-world
+documents used in production. While details have been preserved in order to show clearly
+how professionals document their work, this set of recommendations does not imply
+endorsement of any product, company, or brand on the part of USITT, TSDCA, or the authors.
+A Note on Format: please download this document as a PDF, in order see the correct
+formatting. If you read this as a web page, the formatting is likely to be incorrect.
+April 2022, Approved
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Acknowledgements
+The authors of this proposal wish to thank the general membership of TSDCA (Theatrical
+Sound Designers and Composers Association) for their input and support during the writing
+of these recommendations. The authors also wish to thank Kent State University’s School of
+Theatre & Dance, and Michigan Technological University’s Department of Visual and
+Performing Arts, for supporting this work. Particular acknowledgements go out to the
+following individuals for providing professional insight, opinions, and samples of
+documentation for both review and inclusion within this document:
+● Erik Alberg
+● Charles Coes
+● Alex Hawthorn
+● Richard Ingraham
+● Sun Hee Kil
+● Daniel Lundberg
+● Kate Munchrath
+● Alex Neumann
+● Jessica Paz
+● Will Pickens
+● Jason Romney
+● Jeff Sherwood
+● Stephanie Smith
+Table of Contents
+Page Chapter
+2 Acknowledgements
+2 Table of Contents
+3 Introduction
+10 1 - System Block Diagrams
+27 2 - Plan, Section & Elevation Views
+32 3 - Hookups
+39 4 - Routing
+43 5 - Wireless Microphone (RF) Tracking / Schedules
+46 6 - IP Schedules
+48 7 - Rack Drawings / Custom Panels
+53 8 - Intercom and CCTV (Closed Circuit Television)
+57 9 - Power
+59 10 - Cable Labeling
+60 11 – Equipment Schedules
+2 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Introduction
+The information which a sound designer or engineer must communicate to others has grown
+in complexity over the years, and today’s sound professionals are often responsible for
+communicating information about system components, interconnections, physical positions,
+digital routing, network configuration, radio frequency configuration, and more.
+This document presents a recommended practice for sound system documentation. It is not
+a comprehensive collection of graphic symbols, terms, and necessary paperwork, but is a
+flexible framework of document forms and practices for practical communication. The
+information which designers and engineers must communicate can be represented in many
+forms; this document will identify and describe several of the most common. Neatness,
+clarity, and legibility of these documents are top priorities.
+1. System Block Diagram (also known as a “one-line”, “schematic”, etc.): a drawing or
+drawings of system components, illustrating how they are physically interconnected,
+and providing additional information as suitable to the project.
+2. Plan and Elevation View drawings: while previously, the sound graphics
+recommendations instructed readers to refer to the USITT Scenic Recommendations
+for placement of sound objects, this set of Sound Recommendations includes Plan and
+Elevation Views, as there are several considerations unique to sound that bear
+addressing.
+3. Hookups: spreadsheet documents explaining the system connections by piece of
+equipment (e.g. one part of a hookup will focus on all connections in and out of the
+FOH mixing console).
+4. Routing Tables: explains the routing of signals within digital signal processing devices
+(e.g. digital mixing consoles, DSPs, etc.).
+5. RF Tracking Sheets/Schedules: documenting any wireless microphones, wireless
+speakers, wireless in-ear monitors, and other such devices, showing radio frequency
+assignments, timing and positions of use, etc.
+6. IP Schedules: tracking network addresses and details for any network-connected
+devices.
+7. Rack Drawings and Custom Panel details: used to explain any custom racks and
+panels used in the system.
+8. Com System Block Diagrams/Hookups: detailing the communications systems for a
+given production.
+9. Power: detailing any custom power system configurations
+10. Cable Labels: these may not be part of a designer’s paperwork package, but are still
+critical paperwork tools for engineering team communications.
+11. Schedules: lists of cables and other equipment subdivided by type, useful in assessing
+overall system needs.
+3 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Some sound system designs will be very simple, and as such may not necessitate the use of
+all of these documents. Other sound systems will be very complex, and may necessitate not
+only all of the above documents, but others that remain unaddressed in this document (e.g.
+custom mounting hardware details for loudspeakers mounted in a scenic item). It is expected
+that at minimum, a sound system’s documentation will include either or both of a System
+Block Diagram and Hookup, Plan and Elevation Views of all loudspeaker and other major
+physical item positions, and intended Routing tables for any digital signal paths. Shop orders
+(lists of equipment to be rented from a production company, or “shop”), pick lists (lists of
+equipment to be pulled from the stock of a production company for use in a production), and
+other such installation documents are outside of the scope of these recommendations.
+Document Package Setup
+All of the above-mentioned documents make up what is known as a document package (or
+“drawing set”). Before creating specific documents to go in a package, it is important to set
+up said package, such that customs established in one part of the package are adhered to
+throughout, pages are numbered and labeled consistently, etc.
+Cover Sheet
+The first page of any document package is typically a cover sheet (aka “title page”, “title
+sheet”, etc.). This page can simply name the project and design team, as well as containing
+the title block (see below) template for the rest of the package. It may also serve to list
+general notes applicable to the entire package, host a legend (see below) of symbols used in
+the drawing package, and identify any other conventions used throughout the package that
+may be unique to this document set.
+Title Blocks & Headers
+A title block or header is an identifier that will appear on every page of a document package.
+Title blocks are found on any drafted plate/sheet, and sometimes on spreadsheets as well,
+though sometimes the full title block is replaced on spreadsheets and other text documents
+with a simplified header, which still includes most of the pertinent information listed below.
+Title blocks are sometimes provided by the producing organization, with the intent that
+documents generated by all departments are unified by the title block. Title blocks, at bare
+minimum, contain:
+● Name of production
+● Name of producing organization
+● Name(s) of designer(s)
+4 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+● Name of draftsperson (if different from the designer)
+● Title of each document plate or sheet which should reflect the discipline (i.e.
+"sound") and should be sequentially numbered. Some organizations dictate
+naming conventions for projects.
+● Current date of drawing, and/or revision number or identifier (some projects
+or organizations track revisions by date, some by revision number, e.g.
+“Drawing X Version 2”)
+● Disclaimers: depending on the current phase of the project, and who
+generated it, it is very common for documents to include disclaimers such as
+“not for construction”, “design intent only”, “for bidding only”, “issued for
+build”, etc. These are important distinctions about who is liable for the work
+at hand, and for what phase of the project the documents are intended.
+● Drawing scale (if the document shows real facilities, and not a block diagram
+or other information)
+● Contact information for relevant parties
+Title blocks are most commonly found either as blocks of information occupying the bottom
+right corner of a document, the entire right side of a document, or the entire bottom edge of
+a document.
+Figure I.1: Example title blocks
+Legend (aka “Key”)
+A legend shows all symbols used in a document set, and identifies them. Symbols used in
+block diagrams should be standardized, as described below in Section 1, and any variations
+from the below described should be identified in the legend. Any symbols used in plan and
+elevation view drawings should ideally be to the exact scale and dimensions of the actual
+5 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+objects to be used (many such symbols can be downloaded directly from manufacturer
+websites). If no manufacturer-provided symbols can be found for the object in question,
+create a symbol that is as close to real dimensions as possible (and by no means smaller)
+than the actual object. All symbols used in plan and elevation view drawings should be
+identified in the legend. Additionally, all note conventions used in the document package
+should be shown in the legend.
+Figure I.2: Example legends
+Plates/Sheets
+Plates/Sheets are individual pages in a document set that lay out different parts of the entire
+system package. A sheet index (or table of contents) is common either on the cover sheet or
+near the front of a drawing set. Common plate types include: System Block Diagram, Plan
+View, Section View, Elevation View, Rack Elevations, Electrical System Block Diagram, FOH
+layout, etc. Plate name and numbers should be listed in the Title Block/Key on every page.
+This allows someone viewing the drawing(s) to quickly find information they need.
+Callouts
+A callout is a short string of text connected with a line and arrow used to indicate a note.
+Figure I.3: Example callout
+6 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Connector Naming
+Efforts have been made lately in the professional theatrical sound community to replace
+gendered and other archaic terminology. To that purpose:
+● The end of a cable that has pins which fit into receptacles on the opposite connector
+will be referred to as the PLUG or PIN end. This is the signal-bearing output side of
+XLR cables in typical usage, both ends of a typical guitar patch cable, both ends of a
+typical network cable, etc.
+● The end of a cable with holes which pins on the opposite connector will fit into will
+be referred to as the SOCKET end. This is the signal-receiving input side of XLR cables
+in typical usage, a typical wall-mounted electrical outlet, etc.
+● Speakon and PowerCon share physical forms that are somewhat less conventional.
+The connectors typically mounted on cable ends will be referred to as PLUGS. The
+connectors typically mounted on panels or on loudspeaker enclosures will be
+referred to as SOCKETS. PowerCon connectors may additionally be referred to by
+their color when applicable.
+Figure I.4: An XLR-3 socket is pictured on the left. An XLR-3 plug is pictured on the right
+Multicable is used here to mean any cable which carries multiple signals that can be
+separated from each other physically. Other names for this include “mult”, “multicore cable”,
+or “snake.”
+Note that XLRP and XLRS are abbreviations for XLR Plug and XLR Socket, respectively.
+7 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure I.5: 16-channel multicable
+This picture shows a sixteen-channel (also called sixteen pair, or simply 16Pr) multicable
+with a permanently attached stage box on the left and a permanently attached fanout on the
+right. The stage box has twelve XLR-3 sockets and four XLR-3 plugs; the fanout has twelve
+XLR-3 plugs and four XLR-3 sockets.
+A single CAT-6 cable carrying 64 channels of audio on a Dante network is conceptually filling
+the role of multicable, but since the signals cannot be physically separated (software is
+required to separate the signals) the cable is not a multicable.
+A Note on the Use of Color in Document Packages
+Color-coding can be used to enhance readability of a technical drawing or document (e.g. by
+drawing analog cables in one color, and network cables in another). However, color should
+never be the sole means of communicating a piece of information, as readers with color
+vision deficiency may have a difficult time understanding the intent; additionally many
+drawings end up printed in black and white, and if color is the only site of a piece of
+information, it will be lost in the print.
+8 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+A Note on Manufacturer-Specific Terminology
+Whenever documentation of a system reaches the level of detail where individual models of
+equipment are being specified (as opposed to early documents, which may refer to generic
+device types), refer to the manufacturers’ documentation for details and specific naming
+conventions. It is the goal of technical documentation to present the clearest possible picture
+of the system for the crew installing and using it, so it is important to match naming
+conventions to the manufacturers’ actual nomenclature. For example, if an Aux Send in a
+mixing console is routed to a physical output, note whether that output is called a “Mix Out”,
+an “Omni Out”, or some other name, and use the appropriate name used by that particular
+console system in the documentation.
+A Note on Safety
+When preparing sound system documentation, it is sometimes necessary to document
+rigging, electrical power systems, or other features of a system that require special
+qualifications and/or training. A document set should note that drawings are representing
+design intent only, unless the documents have been prepared by someone with those
+qualifications and/or training.
+9 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+1. System Block Diagrams
+1.1) SBD Overview
+System block diagrams, hereafter abbreviated SBD, are graphic representations intended to
+communicate the components of a system and how those components are interconnected as
+a whole. In the simplest terms, an SBD uses blocks and symbols to represent device
+components, and lines to represent signal cables that interconnect those components. It is
+representational and not to scale. It generally reads from left to right, with sources/inputs
+(e.g. computers and microphones) on the left, and outputs/destinations (e.g. loudspeakers)
+on the right (though in the case of devices, such as network switches, that communicate bi-
+directionally, this is less relevant).
+As with other paperwork, text must be of a legible size when printed (minimum text height
+of ⅛” at full scale is recommended). Larger text for items like device block headers can be
+useful.
+Here is an example of an SBD from a distant view which is intended to give the reader a sense
+of the drawing as a whole.
+Figure 1.1.1: A zoomed out view of an entire sound system represented as System Block Diagram (SBD).
+10 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+An SBD may serve two purposes. First, it may be used as a tool to aid the system engineer in
+constructing and understanding the complex layout of a sound system during the planning
+stages. Second, and most important, it communicates how the system is physically
+interconnected.
+It is suggested that the design and layout of the document be focused to this end. Readability
+is key, and which information is included and which is excluded should prioritize
+information needed to understand and physically install the system. Internal signal routing
+may be represented in a separate document (see Section 4: Routing).
+System block diagrams may show all relevant connections in a single drawing, or they may
+be broken out into separate plates for distinct types of connection (e.g. all network
+connections may be shown separate from analog audio connections, and complex power or
+antenna distribution setups may necessitate their own plates for clarity).
+1.2) Device Blocks – Overview
+A device block is a graphic that represents an individual component in a system. The
+suggested format for a device block is that it should be a simple rectangle with pertinent
+information included inside. Information/parameters included in a device block should be:
+● Device make & model information
+● General equipment type/usage information
+● Unique number or letter scheme to help identify and differentiate units of the same
+type/usage (e.g. multiple power amplifiers in a system)
+● Input connection information (left side of block) and output connection information
+(right side of block); bi-directional control or communications connections may be
+located on either side or the bottom of the device block; whichever best serves clarity
+(see examples below)
+○ Input/output (I/O) numbers or connector labels as seen on the physical device
+○ I/O headers that further specify I/O group information
+○ Source/destination information for channels (optional)
+○ Symbols that denote connector type (optional)
+11 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.2.1: Example device block
+Below is a specific example, with reference images showing the front and back of a device,
+followed by its device block representation.
+Figure 1.2.2: Front and back of physical stage box, device block based on this unit shown in Figure 1.2.3
+12 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.2.3: Device block representation of the above device
+Note that in the above device block (figure 1.2.3), the (1) next to the device description
+indicates that there will be more than one stage box in this system. Another will have “Stage
+Box (2)” listed in the device block header. Note that the device block in the above figure
+includes power connections. Including power in SBDs is optional.
+A few hypothetical mic sources and line output destinations have been listed in the device
+block (inputs from piano mic 1 and 2, and outputs to stage monitor 1 and 2). As stated before,
+this additional source/destination information per channel is optional.
+1.3) Device Blocks – Unused Inputs/Outputs
+In the device block shown in figure 1.2.3, all available inputs and outputs are represented,
+but this is not always necessary. Sometimes it is preferable to exclude unused inputs and
+outputs in device blocks in order to save space and avoid buildup of extraneous information.
+Figure 1.3.1 shows a device block with inputs, outputs, and entire card slots excluded.
+Information is provided to the reader in an abbreviated fashion to clarify that those unused
+connections do exist on the device. Including this information can help ensure that a member
+13 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+of the load in crew doesn’t accidentally connect something to available ports that should
+remain unused.
+Figure 1.3.1: Device Block representation of Yamaha CL5
+with many unused connections condensed
+1.4) Device Block – Connections & Cable Paths
+Device blocks are connected with lines which represent cable paths. Below is an example of
+two connected devices in a system. Note that rounded corners are often used to help visually
+distinguish cable paths from the sharp corners of device blocks.
+Figure 1.4.1: Example of cable paths between two connected device blocks
+14 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+1.5) Cable Path Jumps and Splits
+Cable paths in SBDs will very often need to cross one another. Line jumps are an optional
+style for keeping the separation of signal paths clear. Figure 1.5.1 shows two options for how
+to represent this graphically.
+Figure 1.5.1: Two examples of how cable line jumps can be drawn
+When a signal is duplicated via a splitter, a small dot may be used to indicate this.
+Additionally, a callout may be included to specify how the split is being accomplished.
+Figure 1.5.2: Example of how signal split can be drawn
+1.6) Cable Path Jumps Across Sheets
+A “Fly-off” can be used to indicate cable path jumps that span greater distances across the
+document or from one sheet to another. A unique number/letter scheme should be used and
+a note included indicating where to find the other side of the fly-off.
+Figure 1.6.1: Example of fly-off templates: in-page (above), inter-page (below)
+15 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.6.2: Example of in-page fly-offs
+Figure 1.6.3: Example of inter-page fly-offs, with in-page fly-offs
+1.7) Information Provided on Cable Paths
+Written text placed on or near cable paths is often used to provide additional information.
+Information provided in this form may include:
+● Cable type
+● Cable connector type
+● Cable length
+● Cable run/path details
+● Clarification about physical patching
+16 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+● Source/destination information
+● Identifying numbers for lines in a multicore cable
+● Usage/description of signal
+1.8) Condensing Cable Paths
+Multiple signal paths can be condensed into a single line for a number of reasons, including:
+● Representation of multiple individual cables running the same physical path
+● Representation of a prepared bundle of cables
+When condensing cable paths for these reasons, a callout should be added to note that this
+technique is being used to simplify the drawing, and to clarify the physical layout and
+patching. See example in Figure 1.8.1.
+Figure 1.8.1: Example of multiple individual cables being bundled and running the same physical path, each of
+which patched in a 1-to-1, input-to-output, sequence
+1.9) Condensing Connection Sequences in Device Blocks
+In addition to condensing cable paths as outlined above, physical device connections may
+also be condensed to save space. This technique is especially useful when devices have a
+large number of connections in use. Unless otherwise specified, a 1-to-1, input-to-output
+sequence will be assumed between devices.
+17 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.9.1: Example of condensed input and output connections in device blocks
+1.10) Multicore Cable
+In addition to condensing multiple signal paths into a single line, representations of
+multicore cable can also include additional information such as:
+● Each line numbered
+● Information about multicore cable type
+● Source/destination information
+● Cable connector type
+A multicore run can end at a fanout of cables, a stage box, or a rack/panel mount. These can
+be represented in a variety of ways, but as always, clarity is of paramount importance.
+Figure 1.10.1: Example of 8-channel, fan-to fan multicore cable
+18 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.10.2: Another way to represent a fan-to-fan multicore cable
+Figure 1.10.3: Example of 9-channel multicore cable with stage box and multipin connector
+The diagram in Figure 1.10.3 makes use of a conventional architectural symbol to represent
+the multipin connector. Information within that symbol includes number of lines, a unique
+number/letter scheme, and usage/description of signal.
+1.11) Amplifiers
+Amplifiers can be represented in an SBD as a standard device block as shown in figure 1.11.1
+below. Alternatively, an optional right-facing equilateral triangle symbol may also be used to
+help quickly identify an amplifier channel.
+19 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.11.1: Example of amplifier in Figure 1.11.2: Example of amplifier device block with
+standard device block form optional triangle symbols for channels
+1.12) Loudspeaker and Microphone Symbols
+While device blocks may be used to represent microphones and loudspeakers, it is also
+common to find these represented more pictorially, though the use of these symbols is
+optional. Despite how they are represented, important information should always be listed,
+including:
+● Device make & model information
+● General usage information
+● Unique number or letter scheme
+In figure 1.12.1, note that loudspeaker symbols should include a small triangle to indicate
+that they are active (self-powered).
+Figure 1.12.1: Examples of microphone and loudspeaker symbols
+20 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+1.13) General Group Information
+When multiple components of a system
+have some shared group information,
+brackets can be used to indicate this.
+Figure 1.13.1 shows an oval drawn around
+a group of cables that share a function or
+callout.
+Figure 1.13.2 shows loudspeakers grouped
+by system function into groups labeled
+“MAINS” and “PRACTICALS”.
+Figure 1.13.2: Example of loudspeaker
+Figure 1.13.1: Example of oval
+group information
+around cable paths for callout.
+1.14) Specifying Location
+The installed location of a device or group of devices can be specified using dashed lines to
+enclose segments of the system diagram. Locations commonly specified include designated
+racks or spaces within a venue (e.g. amp room, booth, trap room, front of house, etc.). Figure
+1.14.1 shows an example of four amplifiers inside of a rack, which has been designated as
+“Amp Rack 1.”
+21 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.14.1: Example of dashed lines enclosing a segment of a system to indicate location in a rack
+Location information can also be included in device blocks or next to microphone and
+loudspeaker symbols. Figure 1.14.2 shows a device block located at front-of-house.
+Figure 1.14.2: Example of location information included in device description
+1.15) Break Lines to Indicate Multiple Instances of a Device
+Sometimes, to better serve layout organization and readability, a single device may be drawn
+in more than one place. For an example, consider a stage box which has microphone sources
+connected to its inputs, and monitor loudspeaker destinations connected to its outputs.
+22 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.15.1: Example of stage box device block with microphone
+symbols on the left and loudspeaker symbols on the right
+Because microphones and other input sources are typically shown on the left of a drawing,
+and loudspeakers on the right side, it may be desirable to represent this stage box in two
+places–one to the left of the mixing console, and one to the right–to improve clarity and
+reduce unnecessary cable path clutter.
+A break line or curved line on one side of the device blocks is used to indicate that the device
+is represented in more than one place in an SBD. A note can also be included that states
+where the other representation(s) are located. Below are three examples of how this can be
+drawn.
+Figure 1.15.2: Example of break line on bottom edge of device blocks
+23 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.15.3: Example of curved line on bottom edge of device blocks
+Figure 1.15.4: Example of curved line on side edge of device blocks
+1.16) Wireless Systems
+Wireless audio signals are commonly represented in SBDs with symbols that resemble
+lightning bolts or longitudinal waves.
+24 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.16.1: Example showing two types of wireless signal symbols in use
+Figure 1.16.2: Example showing multiple wireless units
+1.17) Antenna Distribution
+Antenna distribution can be represented as part of the overall SBD, but is sometimes drawn
+as a separate plate for clarity. In the below example, the antennae are drawn in the shape of
+the intended real antenna (a directional “paddle” antenna) to aid in clarity.
+25 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 1.17.1: Example antenna distribution
+26 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+2. Plan, Section, and Elevation Views
+2.1) Basic Configuration
+Plan: to-scale drawing from an overhead view
+Section: to-scale drawing from a side view
+Elevation: to-scale drawing from a frontal view
+The purpose of drafting a plan, section, and elevation is to communicate the physical
+locations of the components of the sound system and how they relate to other elements of
+the project. These drawings should always be drawn to scale so that potential issues with
+sightlines, other equipment, lighting/projection angles, and safety can be properly identified
+by all members of the project team. Each view should clearly state from which perspective
+it is drawn. Refer to USITT scenic recommendations for suggested use of callouts and section
+markers.
+The plan (or ground plan) should be clearly laid out in a document that also contains as many
+other components of the project (scenery, lighting, projection, building structures, etc) as
+possible. Speakers, hardware, and (depending on the needs of the project) cable paths and
+power components should all be represented. Many technical drawing programs have
+speaker symbols available in their libraries, and speaker manufacturers offer free
+downloads of CAD symbols online. If no manufacturer symbol is available, making one from
+scratch is relatively simple utilizing manufacturer data on the product.
+Figure 2.1.1: Example plan view (detail)
+27 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Drawing representations of speaker coverage can assist in the calculation of nominal throw
+and coverage angles. This can be extremely helpful in the early phases of sound system
+design.
+Figure 2.1.2: Example plan view with callout scheme distinct from Figure 2.1.1, and with small coverage cones
+shown for each loudspeaker
+Along with speakers, cables, and other equipment, it can be useful for drawings to include
+explanatory text, labels, and equipment numbering schemes. For clarity, it is recommended
+that any such text or labels be placed in the drawing as a separate layer/class so they can be
+toggled on and off. Additionally, it is essential that any such text or labels are consistent
+across the entire paperwork package. If a particular speaker is referred to as “Speaker #6”
+on the plan view, it should be referred to as “Speaker #6” in all paperwork.
+In the section view, proper placement and scale, as well as other relevant information
+(speaker heights, weights, angles, distance from walls or other barriers, etc.) will be
+beneficial assist in predicting potential hazards. Lighting instrument throws, moving
+scenery, AC ducts, etc. can all be hazards for rigging and/or get in the way of your speaker
+throw.
+28 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+"" 33--11''ss aauurrAAnnww
+ooDD aallTTii
+mm::TTrrii00"" 33--22''++
+++2244''--66""
+EE 44mm::TTrrii33"" 33--22''++ EE 33 ww .. oohhssgg nn uurrii ddss kkoorr
+ww cc eeEEll 33 ##
+""33--11''ss aauurrAAnnww
+ooDD aallTTii
+mm::TTrrii ggnnkkWW iioorr
+++2244''--66""
+EE 22 ""33--11''ss aauurrAAnnww
+ooDD aallTTii
+mm::TTrrii33"" 33--22''++
+++2244''--66"" ++
+EE 11
+2244''--66
+mm::TTrrii
+""
+66"" 44--22''++
+""66--11''
+ddeeyyeevv
+uurr
+ss
+yy uullll ff oo tt nn ss aaww cc ssoo PPrr ee ssuuooHH SS OO UU NN DD PP PP II EE SS NN VV
+DD LL tt aa oo
+OO EE EE
+EE ss iigg
+RR EE
+PP
+UU
+bb pp hh AA
+DD II
+ee
+NN
+oo
+FF
+tt RR ii
+SS DD
+ss
+II
+aa nn
+EE
+TT ss ss gg
+TT TT DD
+MM ii
+OO
+bb ff
+RR
+FF aa EE
+WW
+ll ee ii
+UU
+rr
+BB
+xx NN ..
+// SS
+DD tt
+EE
+TT uu
+AA SS
+SS SS rr
+LL
+ee ..
+LL
+""00--22''
+""00--22'' ""00--22'' ""33--33'' ""00--1111'' W B
+D
+""00--22''
+""33--33'' ""00--22'' o
+i
+e
+s
+o
+t
+ig
+a
+m h
+n
+: t
+c
+: F
+e
+5 a
+f
+r
+r
+l b
+o
+B s
+m
+ox
+boom: 1’
+A
+S
+W
+S
+D
+o
+s
+o
+s
+u
+e o
+i
+n
+u
+c
+l
+s
+d
+i
+l
+n a i
+n
+E
+e t g
+P
+e
+n
+u
+d
+g
+n m
+i
+i
+c
+n
+a
+e
+k
+n
+e
+n
+e
+r
+.a
+n
+le
+W
+A 6
+s
+x le
+a
+@ 1 x
+l
+7
+la
+g . N
+c
+5 m
+e
+e 0 a u 1
+F
+i m . l 1
+l
+.
+o
+c a 4
+r
+o n 8
+e
+m n 0
+s
+Weight: 5 lbs
+Boom: Prosc
+Distance from boom: 1’ FFAARR BBxxBBmm
+BBAALLCC RRAAIILL
+Weight: 45 lbs
+BoomNN:EE PAArRRos BBcxxBBmm
+Distance from boom: 2’
+PPRROOSSCC BBmm
+Weight: 20 lbs
+Boom: Far Box
+Distance from boom: 1’
+""00--66''22
+Weight: 45 lbs Director
+Boom: Prosc Julie Taymor
+++88''--66"" ++88''--66"" ++88''--66"" ++88''--66"" 8" 3/ 8 5 - 2 ' Distance from boom: 2’ W B D o i e s o t ig a m h n : t c : F e 1 a f 3 r r o B lb m o s x boom: 2’ W Q sp u e a a i c g n e h t d i t t : y a 4 : r 5 6 o u l - b n e s d v e M n e ly z z Rail S Li c g e h n t i i c n D g e D s e ig s n ig e n r er Pau D l o S n te H in o b l e d r e g r
+MMEEZZZZ RRAAIILL Costume Designer
+LL 44 ddaa dd rree LL LLCC oo ff LLSS "" 00 --55''22 0000-- oo ff SSUU "" 0011 --4411'' ++ 33 LL ddaa eedd LL rrLLCC oo ff LLSS "" 00 --5522'' 0000-- oo ff SSUU "" 00 --99++'' LL 22 ddaa dd rree LL LLCC oo ff LLSS "" 00 --5522'' 0000-- oo ff SSUU "" 99 --55++'' 11 aaLL dddd rree LL LLCC oo ff LLSS "" 00 --3322'' ""00--00'' oo ff SSUU "" 99 --11++'' 8" 1/ 5
+5
+-' W B D o i e s o t ig a m h n : t c : P e 5 r o f 0 r s o l c b m s boom: 2’ FFOOHH BBOOXX LLOO W
+Bo
+e
+o
+ig
+m
+h
+:
+t :
+F
+2
+a
+0
+r B
+lb
+o
+s
+x
+Draw S n o B u y: nd Co n W sta e nc ig e H h o t ff s m A a N n
+1
+2" W Bo e o ig m h : t : P 5 ro lb sc s Distance from boom: 2’ sWGH
+1/
+0
+Distance from boom: 1’
+MMSS BB oooo mm LL LLCC oo ff LLSS "" 00 --5522'' 0000-- oo ff SSUU "" 44 --2211'' ++ 9
+-'
+3/8"=1'
+Plate #
+Figure 2.1.3: Example side section view
+2.2) Layers
+Using layers, classes, or other categorizations in your drawing facilitates clearer use of the
+drawing. The ability to toggle off all of the lights (for example), using your drafting software
+(viewports, layers, etc,) can be very helpful for clarifying the exact details of a sound
+installation.
+29 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+2.3) Build Drawings
+Build drawings are layouts that contain only information relevant for installation of the
+equipment (where design drawings might contain more info about intended use of each
+component, or illustrations of speaker coverage areas, for example). For the build and
+installation of your plot, a ground plan view with simple speaker symbols and labels may be
+sufficient. Figure 2.5.1 shows some basic rigging information, but lacks specificity. This is
+intentional, as detailed rigging drawings are not always necessary. If cable paths and/or
+rigging are determined prior to installation, draw these into the plot and label accordingly.
+Differentiate different types of cable (by line weight, color, dashed/dotted line, or another
+method. These differentiations should be clearly identified in the legend).
+2.4) Line Weight and Shading
+Any use of line weights and shading should be clearly identified in the legend, and should be
+definitive enough so as to avoid misinterpretation by others reading the document.
+Excessive shading, or very subtle differences in line weight, can be difficult to read and risks
+important information being misunderstood.
+2.5) Other Departments’ Drawings
+Integrating other departments’ drawings into the sound paperwork is a useful tool in making
+sure the system plans will fit into the production as a whole. It allows the visualization of the
+location of scenery, lights, projectors, and other equipment--all of which can help to preempt
+spacing problems in the venue. These details may be displayed in halftone or greyed out
+view to clarify emphasis on sound devices.
+Other departments may not have drawings ready to be incorporated by the time sound
+drawings are due, but close coordination with the other design and production departments
+can help ensure that sound is able to claim the mounting positions needed. Plan and
+elevation view drawings are principally communication tools to allow all departments to
+collaborate on the overall product well in advance of physical installation.
+30 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 2.5.1: Example front elevation view
+31 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+3. Hookups
+3.1) Hookup Overview
+The hookup of a sound system is outlined through a series of block diagrams and/or data
+sheets defining various parts of both the physical cabling, precise patch points, and digital
+interconnections. They are often sub-sections or more detailed plates of a greater System
+Block Diagram. Various systems will require a combination of any or all of the different
+hookups - sometimes combining several hookups onto a single document. It is the
+responsibility of the system designer to properly outline as much information as necessary
+to clearly detail the system requirements.
+Hookup diagrams could include:
+● Individual gear internal patching
+● Digital interconnection and patching
+● Cable hookups
+3.2) Individual Gear Internal Patching
+Individual pieces of gear often benefit from defined hookup and layout information
+independent of the system block diagram. This could include console layouts, standalone
+processors, or outboard matrixes. It is up to the designer and production technicians /
+engineers to determine what individual plates are required to best complete the execution
+of the sound system.
+Figure 3.2.1 (below) is an example of a console hookup, defining only the input and output
+of one piece of gear:
+32 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 3.2.1 Example of a console hookup
+3.3) Digital Interconnection
+Digital interconnection outlines the physical patches between digital equipment of a sound
+system. It does not examine the multitude of individual signal paths running through the
+digital cable, but rather, the physical connections of the individual digital cables.
+It is recommended to specify both the format of digital signal being transmitted as well as
+the type of cable in use.
+33 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 3.3.1 Example of digital interconnection diagram
+If digital interconnect is included as part of a larger block diagram, it is recommended to
+differentiate the various digital signal flows from the analog ones, often by color and always
+some other form of notation.
+3.4) Digital Patch
+Digital Patch paperwork defines the exact signal paths flowing through a single digital cable.
+If the digital patch is point to point, such as AES3 signals, the patch can be defined in a similar
+manner as analogue signal flow. However, when multiple patching options are available,
+such as in a Dante or AES67 signal flow, it is recommended to outline the patching in a grid.
+34 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 3.4.1 Example of a complete digital patch diagram
+35 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 3.4.2 - Detail of Figure 3.4.1
+3.5) Cable Hookups
+Various methods of documenting cable hookups are in use throughout the industry. The
+needs of an installation project’s cable listing are vastly different from the needs of a
+Broadway production. It is important to use a method suited to the project at hand.
+Broadway and touring shows use a series of summaries for the various cables utilized. This
+includes:
+● Individual cable hookup: a listing of single cables run for a specific reason
+● Mult cable summary: a listing of multicables used on the show with end-to-end
+connection information. This does not include the internal individual signal paths.
+● Mult detail: a listing specifying the signal paths assigned to the various analogue
+channels within a mult cable.
+● Bundle hookup: a listing of “bundled” cables which are run as a group during load-in,
+focusing on the geographic termination point at either end of the bundled cable.
+36 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 3.5.1: Example of a partial mult summary listing
+37 of 60
+S o u n d P a
+U S IT T
+D S L
+c D L
+D S R
+c D R
+F ly
+c F L
+F O H
+c F H
+N o t in B u
+c L 1
+c L 2
+c L 3
+c L 4
+c J
+J u ly 1 , 2 0 2 0
+p
+n
+e
+d
+r
+le
+w
+s
+o r k
+D SL C o m
+D SR C o m
+Fly R a il C
+FO H C o m
+Te c h lig h
+Te c h lig h
+Te c h lig h
+Te c h lig h
+C o m Ju m
+o m
+tin g
+tin g
+tin g
+tin g
+p
+1
+2
+3
+4
+C a
+1
+1
+2
+2
+b
+5
+5
+0
+5
+0
+0
+0
+0
+le
+'
+'
+'
+'
+C
+6 -P
+6 -P
+6 -P
+6 -P
+6 -P
+6 -P
+6 -P
+6 -P
+9 -P
+a
+a
+a
+a
+a
+a
+a
+a
+a
+h e c k lis
+F la
+N o t F la
+ir, 1 5 0 '
+F la
+N o t F la
+ir, 1 5 0 '
+F la
+N o t F la
+ir, 2 0 0 '
+F la
+N o t F la
+ir, 2 5 0 '
+ir, 2 5 '
+ir, 2 5 '
+ir, 2 5 '
+ir, 2 5 '
+ir, 2 5 '
+t fo
+g g e
+g g e
+g g e
+g g e
+g g e
+g g e
+g g e
+g g e
+r G
+d :
+d :
+So c
+d :
+d :
+So c
+d :
+d :
+So c
+d :
+d :
+So c
+So c
+So c
+So c
+So c
+So c
+k
+k
+k
+k
+k
+k
+k
+k
+k
+r o u p
+e t: C o m
+e t: C o m
+e t: C o m
+e t: C o m
+e t: Te c h
+e t: Te c h
+e t: Te c h
+e t: Te c h
+e t: C o m
+: C o
+/V id R a
+/V id R a
+/V id R a
+/V id R a
+R a c k
+ra c k
+ra c k
+ra c k
+/V id R a
+m
+c
+c
+c
+c
+c
+k
+k
+k
+k
+k
+P
+P
+P
+P
+P
+P
+P
+P
+P
+lu
+lu
+lu
+lu
+lu
+lu
+lu
+lu
+lu
+g
+g
+g
+g
+g
+g
+g
+g
+g
+B u n d le
+P u
+: D SL
+B u n d le
+P u
+: D SR
+B u n d le
+P u
+: Fly R a il
+B u n d le
+P u
+: FO H U tility
+P u
+: LD
+: LD
+: LD
+: LD
+: Sta g e R a c k
+d /T e s
+lle d /La
+d /T e s
+lle d /La
+d /T e s
+lle d /La
+d /T e s
+lle d /La
+lle d /La
+te
+b e
+te
+b e
+te
+b e
+te
+b e
+b e
+1 d :
+le d /Te ste d
+1 1
+1 d :
+le d /Te ste d
+1 1
+1 d :
+le d /Te ste d
+1 1
+1 d :
+le d /Te ste d
+1 1
+le d /Te ste d
+1 1
+1 1
+1 1
+1 1
+1 1
+1 o f 1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 3.5.2: Example of mult detail in list form
+Figure 3.5.3: Example bundle summary listing
+38 of 60
+S o u n d P
+U S IT T
+B a n d B
+S o c k e t E n d
+P lu g E n d : S
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1 0
+1 1
+1 2
+1 3
+1 4
+1 5
+1 6
+1 7
+1 8
+1 9
+J u ly 1 , 2 0 2 0
+a p e r w o r k
+: b B
+: P it R a c k
+ta g e R a c k
+To y s 2
+To y s 3
+D je m b e
+R e e d 1 U p p e r
+R e e d 1 A lto S a x
+R e e d 1 L o w e r
+R e e d 2 U p p e r
+R e e d 2 Te n o r S a x
+R e e d 2 L o w e r
+Tru m p e t
+A c o u s tic G u ita r
+D o b ro
+H a rm o n ic a
+R e h e a rs a l K e y s L
+R e h e a rs a l K e y s R
+L X G u ita r
+N / C
+X y lo p h o n e
+M D V O G
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+fro
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+M
+e 6 0 4
+e 6 0 4
+M D -4 2 1 II
+K M 1 8 4
+K M 1 8 4
+K M 1 8 4
+K M 1 8 4
+K M 1 8 4
+K M 1 8 4
+R -1 2 1 L iv e
+C -4 1 4
+C -4 1 4
+S M -5 7
+Ty p e 8 5
+Ty p e 8 5
+C -4 1 4
+M D -4 2 1 II
+S M -5 8
+u
+M
+lt D
+o d e
+e ta
+l: 1 9
+il
+-P a ir, 1 0 0 '
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+to
+P u
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+B
+lle
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+a n
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+d
+:
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+io
+1L a
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1 0
+1 1
+1 2
+1 3
+1 4
+1 5
+1 6
+1 7
+1 8
+1 9
+b e le d : 1
+1 o f 1
+Sound Paperwork
+USITT
+Cable Checklist for Group: Bundles
+Surround Orch 200' Flagged: Bundled/Tested: 1 1
+Not Flagged:
+Pulled/Labeled/Tested
+Surround Orch 1 sA1 NL8, 200' (@ Amp Rack 2 ) (@ Orch Surr L ) 1 1 1
+Surround Orch 2 sA2 NL8, 200' (@ Amp Rack 2 ) (@ Orch Surr R ) 1 1 1
+Surround Orch 3 sA3 NL8, 200' (@ Amp Rack 2 ) (@ Orch Surr Rear ) 1 1 1
+Tech 100' Flagged: Bundled/Tested: 1 1
+Not Flagged:
+Pulled/Labeled/Tested
+Tech Com cT 19-Pair, 100' Socket: Tech Distro Plug: FOH Utility 1 1 1
+Tech Sound QLite Edison, 100' Plug: Tech Distro Socket: FOH Utility 1 1 1
+Tech Video A Ethercon, 100' (@ FOH Utility ) (@ Tech Distro ) 1 1 1
+Tech Video B Ethercon, 100' (@ FOH Utility ) (@ Tech Distro ) 1 1 1
+Tech Video spare Ethercon, 100' (@ FOH Utility ) (@ Tech Distro ) 1 1 1
+Tech PD L6-30, 100' Plug: FOH Utility Socket: Tech Distro 1 1 1
+Underbalcony 1 200' Flagged: Bundled/Tested: 1 1
+Not Flagged:
+Pulled/Labeled/Tested
+Underbalc Delay sU1 NL8, 200' (@ Amp Rack 1 ) (@ Balcony Rail ) 1 1 1
+1
+Underbalc Delay sU3 NL8, 200' (@ Amp Rack 1 ) (@ Balcony Rail ) 1 1 1
+3
+July 1, 2020 1 of 1
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+4. Routing
+4.1) Routing Overview
+In the age of digital sound systems, the options available for signal routing within a single
+digital device (not to mention the system as a whole) are plentiful. This kind of information
+is often simply shown by means of tables. This kind of paperwork is most necessary for
+documenting the setup of digital mixing consoles and DSP processors (other kinds of digital
+gear may call for this kind of paperwork, but will not be examined in detail here). These
+documents guide the installation and programming crew as to how to program the devices
+in question.
+4.2) Console Routing
+Console routing generally falls into one of five categories:
+● Input source routing: from stage boxes or onboard inputs to channels
+● Input destination routing: from channels to output paths within the console
+● Matrix routing: output paths often used for multiple layers of mic signal delay in
+musicals
+● Physical output routing: output paths (including the main mix, subgroups, aux sends
+to monitors or effects, etc.) and their connection to physical outputs
+● Control group assignments: not technically signal routing, but assignments to control
+groups such as DCA/VCAs (Digital Control Amplifiers or Virtual Control Amplifiers--
+originally Voltage Controlled Amplifiers in analog consoles) and Mute Groups
+Figure 4.2.1 shows a typical input destination routing table:
+39 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 4.2.1: Example input destination routing
+As shown, this table shows the default routing for each console channel’s signals. Such a
+document can specify relative levels within the cells, but this is often left for actual console
+programming during technical rehearsals. In the above example, “Aviom” channels refer to
+personal mixing stations used by orchestra members to create their own monitoring
+balances in the pit.
+Figure 4.2.2 shows a typical matrix routing table:
+Figure 4.2.2: Example matrix routing
+In the above example, Main L and Main R are routed via the matrix to Main L and Main R
+outputs, where Subgroup 1 is routed to two different Front Fill outputs. These matrix outs
+might feature level or timing differences from the input signal to each matrix destination.
+Such info can be listed in the individual cells of a table such as 4.2.3 above, but again is
+often left to the programming stage of the project. Note that Matrix outs 18-24, while
+unused, are shown here, to make it simple to add them later in the design process if
+needed.
+40 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 4.2.3 shows a typical physical output routing table:
+Figure 4.2.3: Example physical output destination routing
+In the above example, each output path in the console is shown at left routing to a physical
+output patch on a stage box. Note that in this example, the outputs are physically connected
+not just to numbered stage box outputs, but to specific card slots within that stage box.
+They are listed here, but if the console in question designates the physical output point in a
+different manner than what is shown here, the naming conventions should always match
+what the console calls each patch point.
+Figure 4.2.4 shows a typical VCA assign table for a particular scene:
+Figure 4.2.4: Example VCA Assignments
+41 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+The above example shows some typical VCA assignments, as well as overlapping
+assignments (such that the drums, for example, appear in both the “Drums” and “Rhythm
+Section” VCAs).
+4.3) DSP Routing
+DSP routing tables are often very similar to console routing tables. They display physical and
+digital signal inputs routed to paths within the DSP, matrices and other routing paths within
+the DSP, and the connections from output paths to physical outputs (where applicable--some
+signal paths might be digital into the DSP from the console, and digital out of the DSP to the
+amplifiers, in which case all signals listed are digital).
+As such, the examples above in section 4.2 provide plenty of suggestions as to how to go
+about setting up routing tables for a DSP. Care should always be taken to detail card slots,
+and to match any numbering or lettering designations in the tables (as well as naming of
+processing paths and objects) exactly as they will be found within the DSP unit.
+42 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+5. Wireless Microphone (RF) Tracking/Schedules
+Wireless microphone documentation tracks which performers need mics (and during which
+scenes/acts), as well as what devices and transmission frequencies each mic will use.
+5.1) Performer Tracking
+A performer tracking schedule lists actors (it is up to the system designer/engineer whether
+to list these by actor name or character name), and when they will need mics.
+Figure 5.1.1: Example actor mic tracking sheet
+5.2) Mic Tracking
+A mic tracking schedule (also known as an RF schedule) lists relevant info about performer
+mics, including (but not limited to):
+43 of 60
+A c111111111122222222333455555555 t S c e n e
+1234567891
+012345678123112345678
+A c to r 1 A c to r 2 A c to r 3 A c to r 4 A c to r 5 A c to r 6 A c to r 7 A c to r 8 A c to r 9
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+● Actor
+● Character(s)
+● Mic element type
+● Mic element color
+● Mic transmitter type
+● Mic receiver
+● Mic fit/rigging notes
+Figure 5.2.1: Example mic tracking schedule
+5.3) RF/Mic Bible
+The RF crew will also need to produce a workbook (colloquially referred to as a “bible” on
+many productions) that will stay at the RF dressing station backstage. Sheets in this
+workbook will detail the mic setup for each performer, including a photo of rigged mic
+positions and dressing details, and other relevant info.
+44 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 5.3.1: Example RF bible page
+45 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+6. IP Schedules
+6.1) Networking Overview
+An ever-increasing number of parts of modern sound systems are, essentially, computers.
+Digital audio consoles, outboard processing equipment, feature-rich amplifiers, and of
+course traditional personal computers can all be interconnected using a local area network
+(LAN), and on all but the simplest shows, it’s usually worthwhile to do this. When the number
+of devices, or the complexity of the system, grows large enough, it is recommended that the
+network be documented just like any other part of the sound system.
+Devices on a LAN use a system of addressing called the Internet Protocol, or IP. A full
+explanation of IP addressing and of IP systems in general is beyond the scope of these
+recommendations, but a brief discussion is useful in order to get oriented.
+6.2) Documenting IP Addresses
+When using manually assigned IP addresses, the sound system documentation should
+include an IP schedule notating these assignments and any other relevant information.
+Device Name Device Type IP Address Subnet Mask Note
+QLab Main Mac Mini 10.0.0.10 255.255.0.0
+QLab Backup Mac Mini 10.0.0.11 255.255.0.0
+CL5 Sound console 10.0.0.20 255.255.255.0
+Ion Lighting console 10.101.2.96 255.255.0.0 Sound runs
+ethercon to lx
+booth, but lx dept.
+will handle their IP
+addressing.
+Galaxy Speaker processor 10.0.0.50 255.255.255.0
+Some devices have more than one network interface, such as a Mac or Windows computer
+with both an ethernet connection and wifi connectivity. When more than one interface is
+used, another column is warranted:
+46 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Device Name Device Type Interface IP Address Subnet Mask Note
+QLab Main Mac Mini Built-in ethernet 10.0.0.10 255.255.0.0
+QLab Main Mac Mini Wi-fi DHCP DHCP “FOH” wifi
+Admin Mac Mini Built-in ethernet 10.0.0.2 255.0.0.0
+Admin Mac Mini USB ethernet 10.0.0.3 255.0.0.0
+Admin Mac Mini Wi-fi DHCP DHCP “FOH” wifi
+In the case of a system where all devices are deriving their IP addresses via DHCP, a table is
+sometimes still recommended, just to clarify how to configure those devices.
+47 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+7. Rack Drawings/Custom Panels
+7.1) Rack Elevations
+When planning a system that will require custom rack configurations, elevation drawings of
+those equipment racks are a necessary part of a document package. While there are many
+factors to consider when choosing the order in which gear should be placed in a rack
+(including heat dispersion, weight, depth of gear, fan placement, etc.), these are beyond the
+scope of this document.
+Rack drawings are generally laid out in one of two main styles:
+1) Indicative--a drawing where each object in the rack is shown in its proper
+location and scale, but no attempt is made to represent the physical
+appearance of the equipment.
+2) Representative--a drawing where each object in the rack is shown in its proper
+location and scale, and the images for each object represent the physical
+appearances of the real-world equipment.
+In the case of an indicative rack elevation, each object will be labeled both with the model of
+device, and with any other designations that might tie it to other production paperwork (e.g.
+“Amp #3” for the third power amplifier in a rack, that is also labeled “Amp #3” on the block
+diagram). In the case of a representative elevation, if the equipment in use is visually distinct
+enough as to cause no confusion between models, the actual model information may be left
+for a legend to the side of the rack itself, rather than labeling each object. Additional system
+designations (“Amp #3”) would still need to be noted, typically just to the side of each object
+in the rack.
+Rack drawings generally label the rack by “RU”, which stands for “Rack Units”, where
+1RU=1.75”. As such, a 44-space rack will have the numbers 1-44 next to the rack elevation.
+There is no fixed rule as to whether racks should be numbered beginning with 1 at the top
+of the rack or beginning with 1 at the bottom of the rack. However, when systems have
+multiple racks of varying heights, beginning your numbering system at the bottom ensures
+that the first numeral values are always in the same geometric positions (1 on the ground,
+counting up), which can be convenient for discussion during installations. Additionally,
+some rack manufacturers label the RU spaces physically on their racks. If your specified
+racks include this kind of numbering, number the RU on your drawings according to the
+convention (starting at top or bottom) that the manufacturer uses.
+48 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 7.1.1: Indicative rack drawing, RU numbered from bottom
+49 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 7.1.2: Representative rack drawing, RU numbered from top
+(Note: legend and amp #s shown)
+In some cases, it will be advantageous to create additional paperwork (e.g. hookups or
+block diagrams) for each rack. In that case, refer to previous sections of this document for
+recommendations on formatting those documents.
+7.2) Custom Panels
+The number of different types of Custom Panels available to sound designers and audio
+engineers is extensive. This document will not make any effort to outline each make or
+model of panel. Following are a series of steps which can be taken to properly represent
+connectors on custom panels for current or any future manners of connections.
+50 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+7.2.A) Individual Visual Representation
+Any drawing of a custom panel should include a unique and identifiable
+representation of the connection included in the custom panel. As with overall rack
+draftings, custom panels can be drawn in either an indicative or representative
+manner.
+Some samples of visual representation are as follows:
+or
+NL-4 connector RJ45 / Cat5(e) / Cat6 / Ethernet
+connector
+NC3 / XLR pin connector DE-15 / VGA connector
+Wireworks MK19
+Socapex 415 / Veam VSC
+3 G-Block connector (P&S)
+Figure 7.2.A.1: Example panel connectors
+7.2.B) Group Visual Representation
+Connectors which are packaged together for rack construction should then be
+combined into group sections. For Example:
+51 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+6x Ethercon connectors in one panel
+2x MK19 connectors & 19x XLR connectors in one panel
+Figure 7.2.B.1: Example panel layouts
+7.2.C) Additional information
+Any additional information required to clarify and properly interconnect the custom
+panel should be added to the visual representation, including:
+● Type of connector (plug or socket)
+● Name or indicator of the connection
+● Special instructions regarding installation
+7.2.D) Inclusion into Rack Drawing
+Completed panels should then be included into the overall rack drawing. It is most
+important to accurately represent the space required for the panel. For Example:
+S
+P
+Figure 7.2.D.1: Example panels in rack elevation
+52 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+8. Intercom and CCTV (Closed Circuit Television)
+8.1) Audio Com
+The production intercom design is a critically important element of a system design. It is
+integral to a smooth-running and safe production. Without production intercom, tech
+rehearsals can't begin, cues can’t be called, and stagehands cannot collaborate. It is
+important to plan accordingly and implement the plan with the input of all departments.
+It is beyond the scope of this document to dig too deeply into production intercom systems,
+but once the needs of the system are determined, lay out and document the system with the
+same principles referenced previously in this document.
+It is important to communicate with all departments and find out their communication
+needs. Intercom systems may range from small-scale “legacy” systems to large-scale digital
+systems. In either case, important information to track throughout the system includes:
+● Users’ roles (e.g. stage manager, lighting designer, etc.)
+● Station type (wired base station, wireless transmitter, belt pack, speaker station, etc.)
+● Accessory type (headset, handset, etc.)
+● Unit number or letter scheme
+● Channel assignment information
+● Location
+● Paging/stage announce
+Intercom systems may be documented in a number of formats, including:
+● System Block Diagram
+● Hookups
+● Routing
+● Rack Elevations
+● Worksheets
+The following are 3 examples:
+53 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 8.1.1 Example production intercom schedule
+54 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 8.1.2 Example intercom & CCTV worksheet
+55 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 8.1.3 Example production intercom SBD
+8.2) CCTV
+Sometimes it is necessary to provide documentation relating to production video monitor
+routing and hookup. It is beyond the scope of this document to go into detail on video
+systems and their uses, however, the same guidelines laid out in this document should be
+followed to provide clear, concise drawings and schedules.
+56 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+9. Power
+Sometimes it is necessary to provide documentation relating to power routing and hookup,
+particularly in systems using three-phase power sources and power distro that is not built-
+in to the venue. It is beyond the scope of this document to go into detail on power, however,
+the same guidelines laid out in this document should be followed to provide clear, concise
+drawings and schedules.
+Figure 9.1 Example production power SBD
+Custom 19-pin Socapex for chain motor power and control
+Cables color-coded to match physical wiring
+57 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+Figure 9.2 Example production power panel drawing
+58 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+10. Cable Labeling
+It is recommended that both ends of every cable in the sound system and all sound-adjacent
+systems (intercom, CCTV, etc.) be labeled clearly. While not always thought of as part of the
+documentation of a sound system, cable labels are one of the parts of the system
+documentation that ends up being physically part of the production. On Broadway and in
+most theatrical applications, creating the cable labels is the responsibility of the design team.
+In many corporate or installation projects, the labels are created by the technical or
+installation team.
+Cable labeling serves many purposes. Among them:
+● Ensuring that all necessary cable is included in a rental package.
+● Ensuring that every signal reaches its intended destination during installation.
+● Aiding in troubleshooting of system issues.
+It is important to remember that the execution of an audio installation is rarely completed
+by the person who created the documentation, and frequently executed (at least in part) by
+technicians and stagehands who are not full-time audio engineers, and who may not be audio
+crew at all. This may mean that the person creating the cable paperwork is translating
+between designer nomenclature and stagehand execution. Cables should be labeled and
+named in a manner most useful to the technicians who will be installing them.
+There are many different methods and techniques of naming and physically labeling cables.
+For example, Broadway techniques are different from installation or corporate methods.
+None of these is incorrect; it is simply a matter of choosing the method which most efficiently
+executes the cabling task you have at hand. Some things to keep in mind while setting up
+your cable labeling technique:
+● Make the nomenclature system simple and easily discernible.
+● If the use of the cable is not immediately clear with a quick investigation of the label,
+make sure to include a list or key that outlines any additional information required
+for installation.
+● Make sure the technique used to physically affix the label to the cable is in accordance
+with standards readily available and approved by the cable’s owner (e.g. paint pen on
+gaffer’s tape, electrical tape with Avery label, P-Touch tape, or Brady label).
+● Take into account the required lifespan of the label when choosing a physical labeling
+method. A one-day corporate event does not require a permanent or durable label in
+the way a tour or installation does.
+59 of 60
+
+USITT Sound Documentation Recommendations Approved for Release, April 2022
+11. Equipment Schedules
+Schedules in production paperwork are lists of equipment grouped by type (we are not
+referring to actual production timeline or call schedules here). Schedules are often produced
+in order to have one document that identifies every piece of equipment in a single category.
+The following types of equipment often have schedules associated with them (though this is
+not a comprehensive list, and designers or engineers will often create whatever schedules
+will be useful to them on a given production):
+● Cable schedule: a document that lists all anticipated cables to be used in a production,
+with details about gauge, termination type, etc.
+● Amp schedule: a document listing all power amplifiers with details about which racks
+and locations they will be mounted in, basic specs, etc.
+● Computer schedule: a document listing all computers used in a production, and what
+software/licenses and other features they must have
+● FOH schedules: a document listing all the gear that will be installed at Front of House,
+as a means of organizing gear going to the same location in a venue
+● Etc.
+In Figure 11.1, we see a sample detail from a cable schedule:
+Figure 11.1.1: Sample cable schedule (detail)
+60 of 60

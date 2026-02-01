@@ -47,3 +47,34 @@
 - Three-phase example:
     - P = 15,000 W, V = 400 V (line-to-line), PF = 0.9 → I = 15000 / (1.732 × 400 × 0.9) ≈ 24.0 A
     - Design current = 24.0 × 1.25 = 30.0 A → choose appropriate 3‑pole breaker
+
+---
+
+## Cable Gauge and Ampacity
+
+**Common Large Gauge Cables for Power Distribution:**
+
+| Wire Gauge | Ampacity (60°C) | Ampacity (75°C) | Ampacity (90°C) | Typical Use Cases |
+|------------|-----------------|-----------------|-----------------|-------------------|
+| **2 AWG** | 95A | 115A | 130A | Medium power runs, sub-distribution |
+| **2/0 AWG** | 175A | 195A | 225A | Main distribution, larger amp racks |
+| **4/0 AWG** | 230A | 260A | 300A | Heavy power distribution, large shows |
+
+**Key Notes:**
+- **AWG vs Aught (0):** Wire gauge decreases in size as numbers increase (e.g., 10 AWG is smaller than 2 AWG). Once you reach "0" (aught), sizes increase with more zeros: 1/0 (one aught), 2/0 (two aught), 4/0 (four aught) are progressively larger
+- **Temperature Rating:** Ampacity varies based on insulation temperature rating. Always verify cable insulation type (THHN, THWN, etc.)
+- **De-rating Factors:** Reduce ampacity for:
+  - Multiple conductors in conduit (bundle de-rating)
+  - High ambient temperatures (above 30°C/86°F)
+  - Long cable runs (voltage drop considerations)
+- **NEC 80% Rule:** For continuous loads, only use 80% of breaker rating (breaker must be sized at 125% of continuous load)
+- **Voltage Drop:** Even if ampacity is sufficient, calculate voltage drop for long runs:
+  - Target: < 3% for feeders, < 5% total system
+  - Formula: VD = (2 × L × I × R) / 1000, where L = one-way length in feet, R = resistance per 1000ft
+
+**Example Sizing:**
+- 100A continuous load at 240V
+  - Required breaker: 100A × 1.25 = 125A breaker
+  - Cable must handle 100A continuous at operating temperature
+  - 2 AWG copper (115A @ 75°C) would work for short runs
+  - 2/0 AWG copper (195A @ 75°C) provides better margin and lower voltage drop

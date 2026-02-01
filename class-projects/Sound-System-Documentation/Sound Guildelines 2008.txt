@@ -1,0 +1,366 @@
+Sound Graphics Recommended Practice
+A Project of the USITT Sound Commission
+October 1, 2008
+This document presents a Recommended Practice for Sound Graphics which can be used by
+sound designers and system engineers to communicate the sound system to be installed for
+a theatrical production or event. The guidelines are not intended to be a comprehensive
+directory of audio and electronic symbols. Instead, it proposes a flexible framework of
+symbols and graphic tools for practical communication.
+The information which a sound designer or system engineer must communicate to others
+takes several forms. Principal among these are system diagrams, also called schematics,
+scale drawings of equipment placement and rigging, and spreadsheets or databases of
+equipment or cable. This document focuses on the system diagrams which illustrate how the
+equipment to be used is connected. Scale drawings should follow the USITT Scenery Graphic
+Standard for plans, sections and elevations. Equipment lists and cable orders are
+straightforward non-graphic information which is outside the scope of this document.
+System Diagrams
+Audio, video and control system diagrams all follow the same basic framework. The diagrams
+are drawings, not to scale, which show the devices included in a system and how they are
+to be connected. The diagrams are not pictorial elevations and use only a few visual clues
+to indicate equipment type. More typically, devices and their inputs and outputs are simply
+labeled.
+Diagrams generally read from inputs on the left to outputs on the rights for each device and
+for the system as a whole. Complex systems may require many drawings to show all system
+connections. The layout of the diagrams and where to break connections across pages should
+be carefully considered to maintain maximum intelligibility of the design. For less complex
+systems, audio, video and control can be shown within the same diagram. However, for more
+complex systems the various signal types can be shown in separate diagrams.
+Text should always be used at a legible size, usually no less than 3/32". Drawings should be
+created in standard ANSI sizes for ease of printing and duplication. Line weights, borders and
+title blocks should conform to the USITT Scenery Graphic Standard.
+OCTOBER 1, 2008 USITT SOUND GRAPHICS STANDARD PAGE 1
+Device Blocks
+The basic diagram component is the Device Block, see figures 1 a and 1 b. The device block
+has two forms. Figure 1 a shows a device block with a rectangular bottom which indicates
+that this device is only shown once in the diagrams. Figure 1 b shows a device block whose
+bottom is a break line. The break line indicates that this device is also shown elsewhere in
+the diagrams. The other location or locations of the device block can be listed below the
+break line. A curved line is an acceptable alternate for the break line.
+MAKE MODELo tional
+INPUT
+1
+2
+EQUIPMENT TYPE
+OUTPUT
+1
+2
+Figure 1 a- Single Occurance Device Block
+MAKE MODELo tional
+INPUT
+1
+2
+EQUIPMENT TYPE
+OUTPUT
+1
+2
+List other locations_optional
+Figure 1 b- Multiple Occurance Device Block
+Device Blocks also include information about the type of device indicated and the inputs and
+outputs being used, see figure 2. For devices with many input and output options, only
+those being used should be shown. Optional information includes the make and model of the
+device. The device box can be expanded in height to accommodate the connections of the
+device.
+MAKE MODELo tional MAKE MODELo tional
+MIC PREAMP CD RECORDER
+INPUT OUTPUT INPUT
+1 (OR MIC 1)
+2 (OR MIC 2)
+1 ( OR LINE 1 ) 1--------------1 L
+2 (OR LINE 2) R
+AES/EBU AES/EBU
+ETHERNET
+Figure 2- Two Device Blocks Connected
+Device Block Connections
+Devices are connected with lines between input and output. Inputs and outputs should be
+labeled simply. When known, use the exact labeling of the device, ex. 1-2 or left-right.
+In Figure 2 the mic inputs and line outputs can be simply numbered since the input and
+output signal type can be assumed due to the type of device. The AES/EBU output is
+labeled by signal type because it is not typical.
+Bi-directional control or communications connections may be shown attached to the bottom,
+left or right of the device block as best serves clarity. For complex systems these
+connections can be shown on separate drawings.
+OCTOBER 1, 2008 USITT SOUND GRAPHICS STANDARD PAGE 2
+Connector and Cable Labels
+For clarity, connector and cable types can be labeled, see Figure 3. Often this is not
+necessary due to common usage and only connectors or configurations which might cause
+confusion should be labeled. Connectors should be labeled on the left side of the cable line
+only when both ends use the same connector. Cable types can be labeled near the middle
+of the cable line. Cable should not be labeled if it conforms to the system's generally used
+cable. Typical cables for the project can be listed in a note on the drawing or in a separate
+schedule.
+OUTPUT INPUT
+1 TRS XLR L
+2 TRS XLR R
+AES/EBU~X__L_R__ _ TY_P_E,;.._M_A_K~E/_M_O_D_E_L_o~ pt_io_n_a_l AES/EBU
+Figure 3- Connector and Cable Labels
+Connection Grouping
+Some devices, such as mixers, have a large number of connections. For these devices and
+for patchbays, connections greater than three of one type may be grouped as shown in
+Figure 4. Also, note that a label like "MIC INPUTS" may be created to avoid multiple
+occurrences of the word "MIC" at each input.
+MIXER
+! MIC INPUTS GROUP OUTPUTS ! 9 1
+24 8
+TOTAL TOTAL
+t 32 8 t
+Figure 4- Connection Grouping
+Patchb ays
+Patchbays are passive devices which do not require as much graphic space as many other
+devices. They can be drawn as shown in Figure 5 (on page 4). Patchbays should be labeled
+according to signal type and may use the multiple occurrence convention with the break line
+on the bottom. Patchbay drawings should indicate whether the signal is not-normalled,
+half-normalled or full-normalled as shown. A form of full-normals, sleeve normals, are
+included for mic patchbays to avoid errant phantom power paths.
+Loudspeaker, video, network and optical fiber patchbays can all be shown in the same
+manner as the line and mic patchbay examples.
+OCTOBER 1, 2008 USITT SOUND GRAPHICS STANDARD PAGE 3
+LINE LEVEL MIC LEVEL
+PATCHB AYS PATCHB AYS
+HN FN
+FN SN
+SN
+# # # #
+TOTAL TOTAL TOTAL
+SN
+TOTAL
+Figure 5- Patchbay Connections
+In the mic patchbay diagram shown above the input side patchpoints are shown with curved
+corners and the output side is shown with sharp corners. This difference indicates that the
+input cable is a multi-signal cable and the output cables are a group of individual cables. In
+some contexts this difference will not be significant, such as inside a rack, but at other
+times the difference is significant, such as the connection to a stage box or remote rack
+where a "mult" is highly desirable. "Mults" can also be labeled as such to avoid confusion.
+No-normal, full-normal, half-normal and sleeve-normal are all identified on the patchbay
+diagrams. Usually patches made by patch cables are best shown in a table or spreadsheet
+rather than graphically. The table or spreadsheet can be imbedded in the drawing or a
+separate document. Communicating patches in this way allows for easier updating and less
+confusing diagrams.
+I EQUIPMENT IN CONTROL BOOT~
+MIC PREAMP
+INPUT
+1
+2
+OUTPUT
+1 -------
+2------ #
+~------' _J
+Figure 6- Other Connection Conventions
+Other Connection Conventions
+LABEL
+DRAWING/SECTION
+In Figure 6, a dashed box is used with a label to identify the location of the device. The
+box should be used to indicate when equipment is located at some distance from other
+devices. This information can be critical to a system installation and would otherwise be
+absent from the diagrams. Output 1 has a break-line, which may be used to avoid drawing
+lines through devices in order to maintain the clarity of the drawing. The line should only
+break over a short distance and the other side should be clearly visible as a continuation of
+the broken line. If the preceding conditions can not be met then it is better to use a
+fly-off with a label. It is not necessary to break every line which crosses another. The
+break-line is used when needed for clarity. Output 2 in Figure 6 shows a fly-off. A fly-off
+is used when a connection is made to another section of a diagram or another drawing. The
+fly-off can also be used when a connection would travel back towards the left side of the
+drawing, which would make reading the drawing more difficult. The fly-off should be given a
+unique letter or number designation and a label describing where to find the other side of
+the fly-off.
+OCTOBER 1, 2008 USITT SOUND GRAPHICS STANDARD PAGE 4
+Cable Conventions
+Figure 7 shows other useful cable conventions. A "two-fer" or conductor to conductor splice
+is shown with a circle for a clear indication that it is not just a separate cable branching
+off. Also, the length of a cable can be shown. This is often important to define, especially
+for stage boxes and connections from a mixer to an associated rack or stage box. This
+information can also be conveyed in a cable order, in which case the cable would be given
+a unique code for reference to the cable order.
+MIC PREAMP
+INPUT OUTPUT
+- 1 1
+- 2 2
+STAGE BOX
+w 0 A 5 ! I .
+25' -0" # XLR-F
+TOTAL
+#
+TOTAL XLR-M
+FANOUT
+25' -0" #
+TOTAL
+Figure 7- Other Cable Conventions
+AY Panel Connections
+Figure 8 shows the connections at an AV
+panel. In some systems, devices are
+interfaced to installed infrastructure, Only
+connections which will be used need to be
+shown. The connectors are indicated by a
+sideways "V", similar to the patchbay
+symbol. Connector types can be labeled on
+the panel. This panel shows a multi-pin
+connector whose symbol distinguishes it
+from a single cable connection. Connection
+panels can be found in racks as well as
+wall-mounted panels.
+CD RECORDER
+INPUT OUTPUT
+L L -
+R R -
+COMPUTER INTERFACE
+INPUT OUTPUT
+1 USB -
+2
+CABLE CODE/CONNECTORS/
+# OF CABLES_optional
+< SINGLE O >
+1 o' -o"
+MULT 0
+[JJ 25' -0" [(]
+LOCATION_o tional
+AVPINTERCOM{
+# ----#
+----#----
+#----
+LOUDSPEAKER # ---#
+---#
+----
+MIC MULT #-# (28)
+Figure 8- AV Panel Connections
+OCTOBER 1, 2008 USITT SOUND GRAPHICS STANDARD PAGE 5
+Amplifier Symbols
+Figure 9 shows special symbols for amplifiers. The symbol on the upper left is a
+two-channel amplifier. Both channels are shown in the same device block for clarity.
+Amplifier blocks can also use a break-line at the bottom to indicate that it is shown in
+multiple locations. Expanded blocks can be created for four and eight-channel amplifiers. The
+symbol below the two-channel amplifier is a parallel-output amp. Below that one is a
+bridged amplifier, in which the power from two channels is used to produce one output. The
+blocks can also be expanded to include monitoring and control connections as required.
+Amplifier channels using 70V or other output voltages, rather than low impedance, should be
+clearly labeled.
+MAKE/MODEL_optional
+AMP#
+2-CHANNEL
+AMP
+MAKE/MODEL_optional
+AMP#
+PARALLEL
+MONO AMP
+MAKE/MODEL_optional
+AMP#
+BRIDGED
+AMP
+RJ- 45 CNTRL
+NL4
+Figure 9- Amplifier Symbols
+OCTOBER 1, 2008
+HF
+LF
+LOUDSPEAKER
+PATCHB AYS
+NL4
+MONO AMP
+For complex patches
+it is advisable to use
+an imbedded table or
+separate document
+which can be easily
+updated.
+USITT SOUND GRAPHICS STANDARD PAGE 6
+LoudspeakeSry mbols
+Figure 10 shows special symbols for loudspeakers. Loudspeakers are among the most
+complex devices to depict because there are a great diversity of configurations. The goal
+should be a clear explanation of the connection of the loudspeakers, rather than internal
+driver configuration. A two-way loudspeaker with an internal crossover can be shown with a
+single driver symbol. Notes may be required to clearly explain the signal connections.
+LOUDSPEAKER LOCATION
+OR PURPOSE NL4(1)
+MAKE/MODEL_optional
+MONO-AMP
+PWRCON PWR
+SELF-POWERED
+Figure 10- Loudspeaker Symbols
+MicrophonSey mbols
+NL4(1)
+Bl-AMP
+1 X NL4
+2 X Bl-AMP,
+PARALLEL
+CIRCUIT
+Figure 11 shows a special symbol for microphones and a method for depicting wireless
+microphones and their antennas.
+LOCATION AND n1\ 0 MAKE/MODEL ~f----------------<
+_optional
+MAKE/MODELoptional
+TRANSMITTER
+MAKE/MODELoptional
+RECEIVER
+~ OUTPUT t-----
+MAKE/MODELoptional
+FREQUENCY
+_optional
+ANTENNAS
+MOUNTED ON
+MIC STANDS
+AT MIX
+POSITION
+RECEIVER Note: Antennas and antenna networks
+may also be shown. Alternately, the type
+A and quantity of antennas can be noted.
+ANTENNA
+,___-----1 B
+ANTENNA TYPE
+_optional
+OCTOBER 1, 2008
+OUTPUTi-----
+Figure 11- Microphone Symbols
+USITT SOUND GRAPHICS STANDARD PAGE 7
+Circuit Diagrams
+Figure 12 shows circuit diagram symbols and some same circuit diagrams. All of the
+previous figures for system diagrams have been "one-line" or "block" diagrams in which
+cables are indicated by single lines rather than individual conductors being shown by single
+lines. However, some system details have to be shown as "circuit" or "schematic" diagrams
+in which the individual conductors are shown. Circuit diagram sections within a larger block
+diagram should be clearly labeled as such to avoid confusion. A large library of circuit
+diagram symbols is available in ANSI/IEEE Standard 315/1975 and 315A/1986. The inclusion
+of a full set of these symbols is beyond the range of this standard and is not needed by
+most theatrical sound designers and system engineers.
+Single-Pole, Single
+Throw Relay (SPST)
+Double-Pole, Double
+Throw Relay (DPDT)
+Potentiometer
+Auto- Transformer r-
+VOLUME CONTROL WITH
+PAGE OVERRIDE RELAY
+70V MONITOR/PAGE LOUDSPEAKER
+3(~ DRESSING
+ROOM B224
+(
+I 5
+( TOTA L
+I
+LED
+/V
+8
+Diode
+Transformer
+Switch (SPST)
+~
+LOGIC CONTROLLED
+RELAY
+N.C.
+INPUT
+N.O.
+--+----1 LOGIC
+PWR
+PWR SUPPLY
+Note: The abbreviation
+"N.C." means normally
+closed and "N.O." means
+normally open. This
+Figure 12- Circuit Diagram Symbols and Sample Circuits
+refers to the normal or
+unenergized status of a
+connection. The opposite
+condition occurs when
+OCTOBER 1, 2008 USITT SOUND GRAPHICS STANDARD
+the circuit is energized.
+Many devices can be
+wired in either normal
+mode.
+PAGE 8
