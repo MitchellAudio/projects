@@ -1,4 +1,4 @@
-# FIlm Picture Editing
+# Film Picture Editing
 
 This class wont be editing, it will mostly be recording
 
@@ -20,3 +20,27 @@ microphone xlr recorder headphones, context?
 
 Gainstaging
 Pre amp and recorder might both have gainsteps
+
+## Shotgun Microphones
+- Use **interference tube** (slotted tube) for directional rejection
+- On-axis sound enters all slots in phase → reaches capsule clearly
+- Off-axis sound enters slots at different times → phase cancellation
+- More effective at high frequencies (shorter wavelengths)
+- Less directional at low frequencies
+
+## Balanced XLR Connections
+- **Pin 1**: Ground/shield
+- **Pin 2**: Hot (positive signal)
+- **Pin 3**: Cold (inverted signal)
+- Noise picked up equally on both signal lines cancels out at receiving end (common-mode rejection)
+- Allows long cable runs without degradation
+- Supports phantom power for condenser mics
+
+## Bit Depth
+- Defines how many discrete amplitude values can be recorded per sample
+- Each bit adds ~6 dB of dynamic range
+- **16-bit**: ~96 dB range (CD quality, final delivery)
+- **24-bit**: ~144 dB range (professional recording standard, more detail in quiet sounds)
+- **32-bit float**: Virtually unclippable, best for recording with safety margin
+- Higher bit depth = lower noise floor and more post-production flexibility
+- Note: Bit depth affects amplitude resolution; sample rate (44.1/48/96 kHz) affects frequency range
