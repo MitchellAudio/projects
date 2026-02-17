@@ -43,6 +43,18 @@ Complete guide to using Cisco Packet Tracer to prepare for the CCNA exam.
 PC0 ---- Switch0 ---- PC1
 ```
 
+```mermaid
+graph LR
+    PC0["PC0<br/>192.168.1.10/24<br/>Fa0"] -->|Copper Straight-Through| SW["Switch0<br/>Fa0/1, Fa0/2"]
+    SW -->|Copper Straight-Through| PC1["PC1<br/>192.168.1.11/24<br/>Fa0"]
+    
+    classDef pc fill:#99ff99,stroke:#009900,stroke-width:2px
+    classDef switch fill:#99ccff,stroke:#0066cc,stroke-width:2px
+    
+    class PC0,PC1 pc
+    class SW switch
+```
+
 **Steps**:
 
 1. **Add devices**:
@@ -98,6 +110,38 @@ PC0 ---- Switch0 ---- PC1
 PC0 (192.168.1.10/24) --- Switch0 --- Router0 --- Switch1 --- PC1 (192.168.2.10/24)
                                    Gi0/0     Gi0/1
                               (192.168.1.1) (192.168.2.1)
+```
+
+```mermaid
+graph TB
+    subgraph "Subnet 1: 192.168.1.0/24"
+        PC0["PC0<br/>192.168.1.10/24<br/>Gateway: 192.168.1.1"]
+        SW0["Switch0<br/>(Layer 2)"]
+        PC0 -->|Fa0| SW0
+    end
+    
+    subgraph "Router R1"
+        R1_G0["Gi0/0<br/>192.168.1.1/24"]
+        R1_G1["Gi0/1<br/>192.168.2.1/24"]
+        R1_G0 -.->|Routes Between| R1_G1
+    end
+    
+    subgraph "Subnet 2: 192.168.2.0/24"
+        SW1["Switch1<br/>(Layer 2)"]
+        PC1["PC1<br/>192.168.2.10/24<br/>Gateway: 192.168.2.1"]
+        SW1 -->|Fa0| PC1
+    end
+    
+    SW0 -->|Fa0/24| R1_G0
+    R1_G1 -->|Fa0/24| SW1
+    
+    classDef router fill:#ff9999,stroke:#cc0000,stroke-width:3px
+    classDef switch fill:#99ccff,stroke:#0066cc,stroke-width:2px
+    classDef pc fill:#99ff99,stroke:#009900,stroke-width:2px
+    
+    class R1_G0,R1_G1 router
+    class SW0,SW1 switch
+    class PC0,PC1 pc
 ```
 
 **Steps**:
@@ -173,6 +217,47 @@ end
 PC0 (VLAN 10) ─┐
 PC1 (VLAN 20) ─┼── Switch0 ==TRUNK== Switch1 ─┬─ PC2 (VLAN 10)
                                                 └─ PC3 (VLAN 20)
+```
+
+```mermaid
+graph LR
+    subgraph "Switch0"
+        SW0["Switch0"]
+        SW0_V10["Fa0/1<br/>Access VLAN 10"]
+        SW0_V20["Fa0/2<br/>Access VLAN 20"]
+        SW0_TR["Gi0/1<br/>TRUNK<br/>VLANs 10,20"]
+        SW0_V10 -.-> SW0
+        SW0_V20 -.-> SW0
+        SW0_TR -.-> SW0
+    end
+    
+    PC0["PC0<br/>192.168.1.10<br/>VLAN 10 - SALES"] --> SW0_V10
+    PC1["PC1<br/>192.168.1.11<br/>VLAN 20 - ENGINEERING"] --> SW0_V20
+    
+    SW0_TR <-->|802.1Q Trunk| SW1_TR
+    
+    subgraph "Switch1"
+        SW1["Switch1"]
+        SW1_TR["Gi0/1<br/>TRUNK<br/>VLANs 10,20"]
+        SW1_V10["Fa0/1<br/>Access VLAN 10"]
+        SW1_V20["Fa0/2<br/>Access VLAN 20"]
+        SW1_TR -.-> SW1
+        SW1_V10 -.-> SW1
+        SW1_V20 -.-> SW1
+    end
+    
+    SW1_V10 --> PC2["PC2<br/>192.168.1.12<br/>VLAN 10 - SALES"]
+    SW1_V20 --> PC3["PC3<br/>192.168.1.13<br/>VLAN 20 - ENGINEERING"]
+    
+    classDef vlan10 fill:#ffcccc,stroke:#cc0000,stroke-width:2px
+    classDef vlan20 fill:#ccccff,stroke:#0000cc,stroke-width:2px
+    classDef trunk fill:#ffffcc,stroke:#cccc00,stroke-width:3px
+    classDef switch fill:#ccffcc,stroke:#00cc00,stroke-width:2px
+    
+    class PC0,SW0_V10,SW1_V10,PC2 vlan10
+    class PC1,SW0_V20,SW1_V20,PC3 vlan20
+    class SW0_TR,SW1_TR trunk
+    class SW0,SW1 switch
 ```
 
 **Steps**:

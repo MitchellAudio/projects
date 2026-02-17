@@ -38,3 +38,5 @@ The CTS-I certification validates expertise in:
 ## Study Materials in This Folder
 
 - [CTS-I Notes](CTS-I/notes.md) - Comprehensive study notes for CTS-I exam
+
+study ethernet termination colorcodes

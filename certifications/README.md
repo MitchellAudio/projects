@@ -2,7 +2,7 @@
 # Certifications
 
 **Certifications Completed:** 6
-**Certifications In Progress:** 1 
+**Certifications In Progress:** 2
 **Certifications In Backlog:** 6
 
 
@@ -31,8 +31,11 @@
 
 ## In Progress
 
-- [ ] **CCNA (Cisco Certified Network Associate)**  
+- [ ] **CTS-I (Certified Technology Specialist - Installer)**
     _Estimated time: 150 hours_
+    _Start date 2026-02-04_
+- [ ] **CCNA (Cisco Certified Network Associate)**  
+    _Estimated time: 400 hours_
     _Start date 2025-11-27_
 
 
@@ -43,11 +46,12 @@
 - [ ] **Dante Level 3**  
     _Estimated time: 15 hours_
 - [ ] **AutoCAD**  
-    _Estimated time: 100 hours_
+    _Estimated time: 200 hours_
 - [ ] **d&b audiotechnik**  
     _Estimated time: TBD hours_
 - [ ] **L-ISA (L-Acoustics Immersive Sound Art)**  
     _Estimated time: TBD hours_
 - [ ] **Other Shure certifications**  
     _Estimated time: TBD hours_
-
+- [ ] **Anthropic AI Fluency**  
+    _Estimated time: 40 hours_

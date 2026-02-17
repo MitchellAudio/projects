@@ -2609,3 +2609,8 @@ WLL = Breaking Strength / Design Factor
 
 *Last updated: February 2026*
 *These notes are study aids and do not replace official AVIXA documentation.*
+
+
+
+is dante more device specific ip protocols and avb is a networking system that is mostly between switches to allow bandwith prioritization?
+avtp is the end user protocal
