@@ -2607,6 +2607,32 @@ WLL = Breaking Strength / Design Factor
 
 ---
 
+## Quick Reference Formulas
+
+### Conduit Fill Diameter Calculation
+
+To quickly find the required conduit diameter when pulling multiple cables:
+
+$$\text{Conduit Diameter} = \sqrt{\frac{d_1^2 + d_2^2 + d_3^2 + ...}{\text{Fill Ratio}}}$$
+
+Where:
+- $d_1, d_2, d_3$ = individual cable diameters (in inches)
+- Fill Ratio = decimal (e.g., 0.40 for 40%)
+
+**NEC Fill Limits:**
+- 1 cable: 53% (0.53)
+- 2 cables: 31% (0.31)
+- 3+ cables: 40% (0.40)
+
+**Example:**
+Three cables with diameters 0.228", 0.145", and 0.204":
+
+$$D = \sqrt{\frac{0.228^2 + 0.145^2 + 0.204^2}{0.40}} = \sqrt{\frac{0.1146}{0.40}} = 0.535 \text{ inches}$$
+
+Always round **up** to the next standard conduit size (3/4" in this case).
+
+---
+
 *Last updated: February 2026*
 *These notes are study aids and do not replace official AVIXA documentation.*
 

@@ -55,3 +55,5 @@
     _Estimated time: TBD hours_
 - [ ] **Anthropic AI Fluency**  
     _Estimated time: 40 hours_
+- [ ] **ANP (Audio Visual Network Professional)**  
+    _Estimated time: 75 hours_
