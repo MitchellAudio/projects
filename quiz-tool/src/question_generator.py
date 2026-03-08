@@ -5,7 +5,7 @@ Extracts multiple choice questions from markdown content:
 - Definition matching: term ↔ description
 - Fact questions: key statements with the bold term as the answer
 - Formula questions: complete the formula from options
-- Statement questions: true/false style from bullet point facts
+- Statement questions: which fact about a topic is correct (same-topic distractors)
 """
 
 import re
@@ -39,6 +39,15 @@ class QuestionGenerator:
         'signal type matters', 'best of both worlds',
         'still used', 'key concept', 'why',
     }
+
+    # Words that suggest a line is an instruction, not a concept
+    _INSTRUCTION_WORDS = {
+        'click', 'press', 'select', 'open', 'close', 'drag', 'tap',
+        'go to', 'navigate', 'use the', 'run the', 'type the',
+    }
+
+    # Unicode symbols to strip from display text
+    _SYMBOLS = re.compile(r'[✓✗✘✔★☆→←↑↓►▶▷●○◆◇■□▪▫•·‣⬆⬇⬅➡⚡⚠️📌🔑💡🎯]')
 
     def __init__(self, notes: list):
         self.notes = notes
@@ -122,8 +131,8 @@ class QuestionGenerator:
             if not self._is_good_term(term) or len(desc) < 20:
                 continue
 
-            # Clean markdown from description and make sure it doesn't contain the answer
-            desc_clean = self._clean_markdown(desc)
+            # Clean markdown + symbols from description; reject if it contains the answer
+            desc_clean = self._clean_display(desc)
             if term.lower() in desc_clean.lower():
                 continue
 
@@ -171,10 +180,14 @@ class QuestionGenerator:
                 if not self._is_good_term(term):
                     continue
 
+                # Skip very short terms — they make trivial fill-in-the-blank
+                if len(term) < 5:
+                    continue
+
                 # Build display line with blank
                 clean_line = line_stripped.lstrip('-*0123456789. ')
                 display_line = clean_line.replace(f'**{term}**', '_____', 1)
-                display_line = self._clean_markdown(display_line)
+                display_line = self._clean_display(display_line)
 
                 # Make sure the answer isn't still visible in the question
                 if term.lower() in display_line.lower():
@@ -246,40 +259,30 @@ class QuestionGenerator:
 
     def _extract_statement_mc(self, section) -> list:
         """
-        Multiple choice: ask about facts stated in the notes using
-        the section header as context.
+        Multiple choice: given a topic/section header, pick the correct fact.
 
-        Uses bullet points that state a clear fact and turns them into
-        "According to the notes on [topic], which of the following is true?"
+        Distractors come from the SAME TOPIC first so they're plausible.
+        Facts must pass _is_good_fact quality gate.
         """
         questions = []
 
         if section.level < 2 or len(section.content) < 3:
             return []
 
-        # Collect clean bullet-point facts from this section
+        # Collect quality-filtered facts from this section
         facts = []
         for line in section.content:
             stripped = line.strip()
             if not re.match(r'^[-*]', stripped):
                 continue
-            cleaned = stripped.lstrip('-* ')
-            cleaned = self._clean_markdown(cleaned)
-            if len(cleaned) < 30 or len(cleaned) > 200:
-                continue
-            if ':' in cleaned[:15]:
-                continue
-            if cleaned.startswith(('[ ]', '[x]', 'http', 'www')):
-                continue
-            if '**' in cleaned:
-                continue
-            facts.append(cleaned)
+            cleaned = self._clean_display(stripped)
+            if self._is_good_fact(cleaned):
+                facts.append(cleaned)
 
         if len(facts) < 2:
             return []
 
-        # Pick facts from this section and pair with wrong facts from other sections
-        header = self._clean_markdown(section.header)
+        header = self._clean_display(section.header)
 
         for fact in facts[:3]:  # Limit per section
             wrong_facts = self._get_wrong_facts(fact, section, 3)
@@ -309,12 +312,20 @@ class QuestionGenerator:
     # ─── Helpers ──────────────────────────────────────────
 
     def _collect_all_facts(self) -> dict:
-        """Collect bullet-point facts from all notes, grouped by section key."""
+        """Collect quality-scored bullet-point facts, grouped by section key.
+
+        Also builds:
+          self._all_terms       — set of bold terms across all notes
+          self._facts_by_topic  — {topic: [facts]} for same-topic distractors
+        """
         facts_by_section = {}
+        facts_by_topic = {}      # topic -> list of cleaned facts
         all_terms = set()
         bold_pattern = re.compile(r'\*\*([^*]+)\*\*')
 
         for note in self.notes:
+            topic_facts = facts_by_topic.setdefault(note.topic, [])
+
             for section in note.sections:
                 key = f"{note.topic}|{note.subtopic}|{section.header}"
                 section_facts = []
@@ -322,18 +333,10 @@ class QuestionGenerator:
                 for line in section.content:
                     stripped = line.strip()
                     if re.match(r'^[-*]', stripped):
-                        cleaned = stripped.lstrip('-* ')
-                        cleaned = self._clean_markdown(cleaned)
-                        if len(cleaned) < 30 or len(cleaned) > 200:
-                            pass
-                        elif ':' in cleaned[:15]:
-                            pass
-                        elif cleaned.startswith(('[ ]', '[x]', 'http', 'www')):
-                            pass
-                        elif '**' in cleaned:
-                            pass
-                        else:
+                        cleaned = self._clean_display(stripped)
+                        if self._is_good_fact(cleaned):
                             section_facts.append(cleaned)
+                            topic_facts.append(cleaned)
 
                     # Collect bold terms
                     for m in bold_pattern.finditer(line):
@@ -345,6 +348,7 @@ class QuestionGenerator:
                     facts_by_section[key] = section_facts
 
         self._all_terms = sorted(all_terms)
+        self._facts_by_topic = facts_by_topic
         return facts_by_section
 
     def _is_good_term(self, term: str) -> bool:
@@ -369,16 +373,19 @@ class QuestionGenerator:
         return True
 
     def _get_distractors(self, correct_term: str, count: int, section) -> list:
-        """Get distractor terms from the collected bold terms."""
-        candidates = [
-            t for t in self._all_terms
-            if t.lower() != correct_term.lower()
-            and correct_term.lower() not in t.lower()
-            and t.lower() not in correct_term.lower()
-        ]
-        if len(candidates) < count:
-            return candidates
-        return random.sample(candidates, count)
+        """Get distractor terms, preferring same-topic terms for plausibility."""
+        def is_valid(t):
+            return (
+                t.lower() != correct_term.lower()
+                and correct_term.lower() not in t.lower()
+                and t.lower() not in correct_term.lower()
+                and len(t) >= 3
+            )
+
+        all_valid = [t for t in self._all_terms if is_valid(t)]
+        if len(all_valid) < count:
+            return all_valid
+        return random.sample(all_valid, count)
 
     def _get_similar_distractors(self, correct_term: str, count: int, section) -> list:
         """
@@ -435,37 +442,142 @@ class QuestionGenerator:
         return candidates + extra[:count - len(candidates)]
 
     def _get_wrong_facts(self, correct_fact: str, section, count: int) -> list:
-        """Get facts from other sections to use as wrong answers."""
-        current_key = f"{section.topic}|{section.subtopic}|{section.header}"
-        candidates = []
+        """Get plausible wrong facts, preferring the SAME TOPIC.
 
+        This makes questions harder because the distractors are
+        about related subjects rather than completely different domains.
+        """
+        current_key = f"{section.topic}|{section.subtopic}|{section.header}"
+        correct_words = set(correct_fact.lower().split())
+
+        def is_different_enough(fact):
+            if fact.lower() == correct_fact.lower():
+                return False
+            fact_words = set(fact.lower().split())
+            if correct_words and fact_words:
+                overlap = len(correct_words & fact_words) / max(len(correct_words), len(fact_words))
+                if overlap > 0.5:
+                    return False
+            return True
+
+        # 1. Try same-topic, different-section facts first
+        same_topic = []
         for key, facts in self.all_facts.items():
             if key == current_key:
                 continue
+            # Same topic?
+            if key.startswith(f"{section.topic}|"):
+                for fact in facts:
+                    if is_different_enough(fact):
+                        same_topic.append(fact)
+
+        if len(same_topic) >= count:
+            return random.sample(same_topic, count)
+
+        # 2. Not enough same-topic — supplement with other topics
+        other_topic = []
+        for key, facts in self.all_facts.items():
+            if key == current_key:
+                continue
+            if key.startswith(f"{section.topic}|"):
+                continue  # already collected
             for fact in facts:
-                # Make sure it's different enough from the correct answer
-                if fact.lower() == correct_fact.lower():
-                    continue
-                # Check word overlap isn't too high (would be confusing)
-                correct_words = set(correct_fact.lower().split())
-                fact_words = set(fact.lower().split())
-                if correct_words and fact_words:
-                    overlap = len(correct_words & fact_words) / max(len(correct_words), len(fact_words))
-                    if overlap > 0.5:
-                        continue
-                candidates.append(fact)
+                if is_different_enough(fact):
+                    other_topic.append(fact)
 
-        if len(candidates) < count:
-            return candidates
-        return random.sample(candidates, count)
+        combined = same_topic + other_topic
+        if len(combined) < count:
+            return combined
+        # Prefer same-topic candidates
+        if same_topic:
+            n_same = min(len(same_topic), max(1, count - 1))
+            n_other = count - n_same
+            result = random.sample(same_topic, n_same)
+            if other_topic and n_other > 0:
+                result += random.sample(other_topic, min(n_other, len(other_topic)))
+            return result[:count]
+        return random.sample(combined, count)
 
-    @staticmethod
-    def _clean_markdown(text: str) -> str:
-        """Remove markdown formatting from text."""
+    @classmethod
+    def _clean_markdown(cls, text: str) -> str:
+        """Remove markdown formatting and symbols from text."""
         text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
         text = re.sub(r'\*([^*]+)\*', r'\1', text)
         text = re.sub(r'`([^`]+)`', r'\1', text)
+        # Remove lingering markdown artefacts like  Important:**
+        text = text.replace('**', '')
         return text.strip()
+
+    @classmethod
+    def _clean_display(cls, text: str) -> str:
+        """Clean text for display: remove markdown, symbols, leading bullets."""
+        text = cls._clean_markdown(text)
+        text = cls._SYMBOLS.sub('', text)
+        text = text.lstrip('-*0123456789. ')
+        # Collapse double spaces left by symbol removal
+        text = re.sub(r'  +', ' ', text).strip()
+        return text
+
+    @classmethod
+    def _is_good_fact(cls, text: str) -> bool:
+        """
+        Score a cleaned fact line for quiz-worthiness.
+
+        Good facts:
+          - Are complete sentences or clauses (contain a verb-like word)
+          - Contain technical terms, numbers, or comparisons
+          - Are not just instructions ("click", "open", "use the")
+          - Are not just titles, lists of names, or fragments
+        """
+        lower = text.lower()
+
+        # Too short or too long
+        if len(text) < 35 or len(text) > 200:
+            return False
+
+        # Starts with a label or header pattern  (e.g. "Note:" "Key:")
+        if ':' in text[:18]:
+            return False
+
+        # Checkbox / task items
+        if text.startswith(('[ ]', '[x]', '[X]')):
+            return False
+
+        # URLs
+        if lower.startswith(('http', 'www')):
+            return False
+
+        # Residual markdown
+        if '**' in text or '__' in text:
+            return False
+
+        # Ends with colon — it's a label/header fragment, not a complete fact
+        if text.rstrip().endswith(':'):
+            return False
+
+        # Instruction-style lines ("Click File > Save", "Use the slider")
+        for phrase in cls._INSTRUCTION_WORDS:
+            if lower.startswith(phrase):
+                return False
+
+        # Sentence quality: should contain at least one verb-like word
+        verb_indicators = (
+            ' is ', ' are ', ' was ', ' were ', ' has ', ' have ',
+            ' can ', ' will ', ' does ', ' do ', ' uses ', ' allows ',
+            ' means ', ' provides ', ' creates ', ' requires ', ' carries ',
+            ' sends ', ' receives ', ' supports ', ' ensures ', ' prevents ',
+            ' determines ', ' defines ', ' enables ', ' converts ', ' measures ',
+            ' occurs ', ' happens ', ' travels ', ' operates ', ' connects ',
+        )
+        has_verb = any(v in lower for v in verb_indicators)
+
+        # Also accept lines with numbers/units (quantitative facts)
+        has_numbers = bool(re.search(r'\d+\s*(?:ms|hz|khz|mhz|db|v|mv|m/s|ft|gbps|mbps|w|ohm|°|%)', lower))
+
+        if not has_verb and not has_numbers:
+            return False
+
+        return True
 
     @staticmethod
     def check_answer(user_answer: str, correct_answer: str) -> tuple:

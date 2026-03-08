@@ -14,6 +14,7 @@ This directory contains structured learning plans, resources, and progress track
 - [ ] [Internal Wiring of Speakers](Tech/Internal-wiring-of-speakers/)
 - [ ] [Types of Microphone Patterns](Tech/Types-of-microphone-patterns/)
 - [ ] [ADC DAC Conversions](Tech/ADC-DAC-conversions/)
+- [ ] [Time Alignment of Speakers](Tech/Time-alignment/)
 
 ### Software
 - [ ] [Theatre Mix](Software/Theatre-mix/)

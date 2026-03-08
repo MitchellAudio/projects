@@ -9,36 +9,36 @@ A GUI quiz application that generates questions from your markdown learning note
   - **By Topic** — select one or more topics (e.g., Tech, Electrics, Software)
   - **By Section** — select specific subtopics (e.g., Time alignment, Impedance)
 - **Three question types:**
-  - **Recall (Flashcard)** — read a concept prompt, try to recall the answer, then reveal and self-rate
-  - **Fill in the Blank** — type the missing key term from a statement
-  - **Multiple Choice** — pick the correct term from four options
+  - **Definition Match** — given a description, pick the correct term
+  - **Complete the Statement** — pick the missing key term from a statement
+  - **Which is Correct?** — pick the true fact about a given topic
+- **Browser-based GUI** — opens automatically in your default browser (no install required)
 - **Instant feedback** with colour-coded correct/incorrect indicators
 - **Score tracking** throughout the quiz with a results summary at the end
 - **Configurable question count** (5, 10, 15, or 20 per quiz)
-- **Flexible answer checking** — case-insensitive, partial matches accepted
 
 ## Usage
 
 ```bash
 # From the project root
-python quiz-tool/src/quiz.py
+python3 quiz-tool/src/quiz.py
 
 # Or from inside the quiz-tool directory
 cd quiz-tool
-python src/quiz.py
+python3 src/quiz.py
 
 # Or specify a custom notes path
-python src/quiz.py /path/to/learning-plan
+python3 src/quiz.py /path/to/learning-plan
 
-pkill -f "python3 quiz-tool/src/quiz.py"
+# Stop the server (works from any terminal window)
+pkill -f "quiz-tool/src/quiz.py"
 ```
 
 ## Requirements
 
 - Python 3.8+
-- Tkinter (included with Python on macOS and most Linux distributions)
 
-No external dependencies — the tool uses only the Python standard library.
+No external dependencies — the tool uses only the Python standard library and serves a browser-based UI on `http://127.0.0.1:8787`.
 
 ## How It Works
 
@@ -58,8 +58,10 @@ quiz-tool/
 ├── README.md
 ├── requirements.txt
 └── src/
-    ├── quiz.py                 # Entry point
+    ├── quiz.py                 # Entry point — starts server and opens browser
     ├── notes_parser.py         # Finds and parses markdown notes
     ├── question_generator.py   # Generates questions from parsed content
-    └── quiz_app.py             # Tkinter GUI application
+    └── quiz_app.py             # Web server (browser-based SPA via http.server)
 ```
+
+id like to add a bit of question tracking if wrong or if i want to flag something 
