@@ -150,6 +150,109 @@
 
 ---
 
+## Word Clock Over Ethernet — IEEE 1588 PTP In Depth
+
+### What Is PTP?
+
+- **PTP (Precision Time Protocol)** — IEEE standard 1588, designed to synchronise clocks across an Ethernet network to sub-microsecond accuracy
+- Originally developed for industrial automation and finance; adopted by audio/video standards (Dante, AES67, AVB, SMPTE ST 2059)
+- Unlike NTP (Network Time Protocol, used for computers), PTP achieves nanosecond-level accuracy by measuring the actual network propagation delay between devices
+- PTP does not carry audio — it only carries timing information so devices can reconstruct a shared clock
+
+### How PTP Works — The Message Exchange
+
+PTP uses a structured exchange of timestamped messages to measure and correct for network delay:
+
+1. **Announce** — the grandmaster (or candidates) periodically broadcast their clock quality. All devices use this to elect the best grandmaster via the BMCA
+2. **Sync** — the grandmaster sends a Sync message with a precise transmit timestamp (T1). The slave records the time it received it (T2)
+3. **Follow_Up** — immediately after Sync, the grandmaster sends the exact T1 timestamp (two-step mode). One-step mode embeds T1 directly in the Sync
+4. **Delay_Req** — the slave sends a Delay Request message, recording its transmit time (T3)
+5. **Delay_Resp** — the grandmaster replies with the time it received the Delay_Req (T4)
+
+From these four timestamps the slave calculates:
+
+- **Mean path delay** = ((T2 − T1) + (T4 − T3)) ÷ 2
+- **Offset from master** = (T2 − T1) − mean path delay
+- The slave adjusts its local clock by this offset, continuously correcting itself
+
+### Best Master Clock Algorithm (BMCA)
+
+- When multiple PTP-capable devices are on the same network, they all announce their clock quality
+- The **BMCA** (Best Master Clock Algorithm) automatically elects the grandmaster — no manual configuration needed
+- The election is based on a priority hierarchy (lower number wins at each level):
+  1. **Priority 1** — manually configured preference (0–255, lower is better). Default is 128
+  2. **Clock class** — indicates clock accuracy category (e.g., locked to GPS = class 6; free-running = class 135)
+  3. **Clock accuracy** — the rated accuracy of the oscillator (< 25 ns, < 100 ns, < 1 µs, etc.)
+  4. **Offset scaled log variance** — stability of the clock over time
+  5. **Clock identity** — the MAC address-derived unique ID, used as a final tiebreaker
+- In practice, Dante devices automatically participate in the BMCA. The Dante Controller Clock Status page shows which device won and is acting as grandmaster
+- You can manually force a preferred grandmaster by setting Priority 1 lower on that device
+
+### PTP Clock Node Types
+
+| Type | Role |
+|---|---|
+| **Ordinary Clock (OC)** | A regular endpoint device — either a grandmaster (one port, generates clock) or a slave (one port, receives and locks to clock). Most Dante devices are OCs |
+| **Boundary Clock (BC)** | A device with multiple PTP ports that terminates PTP on one port and re-originates it on others. Managed switches can act as boundary clocks — they absorb the grandmaster's timing and redistribute a locally regenerated, cleaner clock to each port. This removes the variable delay that switches introduce from the timing path |
+| **Transparent Clock (TC)** | A device (usually a switch) that measures how long a PTP message spent inside it and adds this residence time to the message's correction field. It does not re-originate the clock — it just corrects for the switch's own processing delay. Makes PTP much more accurate without requiring the switch to be a full boundary clock |
+
+### Why Switches Matter for PTP
+
+- Ethernet switches introduce variable delay (latency) between when a PTP message arrives and when it is forwarded — this is called **residence time** or **queuing delay**
+- If a Sync message is delayed differently each time it passes through a switch, the slave's delay calculation becomes inaccurate, and the timing synchronisation degrades
+- **Non-PTP-aware switch:** passes PTP messages as normal traffic, but the variable queuing delay adds jitter to the timing. Acceptable for Dante at short distances, but not ideal
+- **Transparent clock switch:** measures its own delay and corrects the PTP message — the slave gets accurate delay information even through the switch
+- **Boundary clock switch:** terminates PTP from the grandmaster and re-originates locally — the slaves on each port see a clean, local clock source with no accumulated upstream jitter
+
+### Dante and PTP in Practice
+
+- Dante uses **IEEE 1588v2** PTP operating in the **multicast** mode
+- All Dante devices on a network participate in the BMCA and elect a grandmaster automatically
+- The grandmaster is the device whose Sync messages all others lock to
+- Dante uses a **1 ms synchronisation interval** — Sync messages are sent every millisecond
+- PTP traffic in Dante is sent to specific multicast addresses (`224.0.1.129` for peer delay, `224.0.0.107` for general PTP)
+- **IGMP snooping** must be enabled on the switch so PTP multicast is not flooded to every port unnecessarily
+- Dante Controller's **Clock Status** page shows:
+  - Which device is the grandmaster
+  - The clock offset of each device from the grandmaster
+  - Whether each device is Locked, Locking, or Not Locked
+
+### AES67 and PTP
+
+- **AES67** — the SMPTE/AES standard for audio-over-IP interoperability (the "Dante speaks to other systems" standard)
+- AES67 also uses IEEE 1588v2 PTP but operates in **unicast** mode (point-to-point) rather than multicast
+- AES67 typically uses **PTP domain 0** (Dante uses domain 0 by default — check device documentation)
+- When Dante devices are set to **AES67 mode**, they participate in AES67's PTP domain and can sync with non-Dante AES67 devices (Ravenna, LIVEWIRE+, Q-SYS)
+- **Key difference:** AES67 unicast PTP requires explicit configuration of who talks to whom; Dante multicast PTP self-configures
+
+### AVB / gPTP (IEEE 802.1AS)
+
+- **gPTP** (generalised PTP, IEEE 802.1AS) is a simplified, stricter version of PTP used by **AVB (Audio Video Bridging)** systems (Audinate hardware, some Apple devices, Dante-AVB-compatible equipment)
+- gPTP requires switches to be AVB-aware (they must act as transparent or boundary clocks) — it will not work reliably through standard switches
+- Dante uses standard IEEE 1588v2, NOT gPTP — Dante can work through any managed switch; AVB requires AVB-capable switches
+- This is one reason Dante is dominant in live sound: it works on standard networking infrastructure
+
+### PTP Troubleshooting
+
+| Symptom | Likely Cause |
+|---|---|
+| Multiple grandmasters elected | Two network segments are isolated — PTP multicast not crossing a VLAN boundary or switch config issue |
+| Clock offset > 1 µs | Switch not PTP-aware, high network load, long cable runs with many hops |
+| Devices show "Not Locked" | PTP multicast not reaching them — check IGMP snooping, VLAN config, switch multicast settings |
+| Grandmaster keeps changing | Network instability, BMCA re-running due to packet loss or device restarts |
+| Audio dropouts in Dante with good network | Check clock status — a clock re-election event causes a brief dropout while all devices re-lock |
+
+### Summary: Analogue Word Clock vs. PTP
+
+| | Analogue Word Clock (BNC) | Network PTP (Dante/AES67) |
+|---|---|---|
+| **Cable** | Dedicated 75 Ω BNC coax | Shared Ethernet (same as audio) |
+| **Accuracy** | < 1 ns with good DA | < 1 µs (typically < 100 ns with good switches) |
+| **Self-configuring?** | No — you set master manually | Yes — BMCA elects grandmaster automatically |
+| **Scales to many devices?** | Requires DA per group | Yes — any number of devices on the network |
+| **Switch dependency** | None | Requires managed switch for best results |
+| **Used by** | Analogue consoles, outboard gear | Dante, AES67, MADI-over-IP, AVB |
+
 ## Sample Rates and Word Clock
 
 ### Common Sample Rates
@@ -229,6 +332,3 @@
 - [Audinate — Dante Clocking (PTP)](https://www.audinate.com/learning)
 - [Sound On Sound — Understanding Word Clock](https://www.soundonsound.com/)
 - Relate to your notes on [Broadcast Methods](../Broadcast-methods/notes.md) and [ADC-DAC Conversions](../ADC-DAC-conversions/notes.md)
-
-
-need more information about word clock over ethernet
