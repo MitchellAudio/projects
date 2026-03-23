@@ -2640,3 +2640,10 @@ Always round **up** to the next standard conduit size (3/4" in this case).
 
 is dante more device specific ip protocols and avb is a networking system that is mostly between switches to allow bandwith prioritization?
 avtp is the end user protocal
+
+
+parallel means positive to positive means ohms goes down and draws more power
+series means positive to negative doubles ohms 
+
+baud rate is amount of times that the voltage changes on the wire giving the amount of data that can be transmited
+bit rate= baud rate * bits per symbol

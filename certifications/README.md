@@ -41,6 +41,8 @@
 
 ## Backlog
 
+- [ ] **Q-Sys Trainings**  
+    _Estimated time: 150 hours_
 - [ ] **Shure Integrated Systems**  
     _Estimated time: 15 hours_
 - [ ] **Dante Level 3**  
