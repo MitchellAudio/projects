@@ -1,13 +1,16 @@
 
 # Certifications
 
-**Certifications Completed:** 6
-**Certifications In Progress:** 2
-**Certifications In Backlog:** 6
+**Certifications Completed:** 7
+**Certifications In Progress:** 1
+**Certifications In Backlog:** 9
 
 
 ## Completed
 
+- [x] **CTS-I (Certified Technology Specialist - Installer)**
+    _Start date 2026-02-04_
+    _Completion date 2026-03-18_
 - [x] **Wireless Workbench**
         _Start date 2025-12-01_
     - [x] Level 1  
@@ -31,9 +34,6 @@
 
 ## In Progress
 
-- [ ] **CTS-I (Certified Technology Specialist - Installer)**
-    _Estimated time: 150 hours_
-    _Start date 2026-02-04_
 - [ ] **CCNA (Cisco Certified Network Associate)**  
     _Estimated time: 400 hours_
     _Start date 2025-11-27_
