@@ -45,3 +45,5 @@ This directory contains structured learning plans, resources, and progress track
 
 ### Certifications
 - [Certification Progress & Details](../certifications/README.md)
+- [ ] [Netgear AV](Netgear%20AV/)
+- [ ] [Netgear AV Level 1 Notes](Netgear%20AV/AV%20Level%201/notes.md)

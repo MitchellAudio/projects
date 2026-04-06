@@ -34,9 +34,8 @@
 
 ## In Progress
 
-- [ ] **CCNA (Cisco Certified Network Associate)**  
-    _Estimated time: 400 hours_
-    _Start date 2025-11-27_
+- [ ] **Netgear AV Certifications**  
+    _Estimated time: 100 hours_
 
 
 ## Backlog
