@@ -1,5 +1,6 @@
 # Notes: Autocad
 
-## What is Autocad?
 
-_Add your notes, references, and key learnings here._
+go for multiple sbd pages (orchestra seperate page maybe playback)
+
+Fix timesheet (dates not real/dont make sense)

@@ -44,3 +44,20 @@ Pre amp and recorder might both have gainsteps
 - **32-bit float**: Virtually unclippable, best for recording with safety margin
 - Higher bit depth = lower noise floor and more post-production flexibility
 - Note: Bit depth affects amplitude resolution; sample rate (44.1/48/96 kHz) affects frequency range
+
+
+you can get better sound with skill than better equipment
+20hz 20,000
+diaphram creating a change in voltage 
+closer the mic the more base you get
+inverse square law is doubling in distance is -6db
+lobing is aim at the chest
+establish a line by asking the guy and drop it into frame 
+3:1 avoid phase by placing second mic 3x away from source
+boom then plant and lov
+smart slates are timecode that sends "jamms" from audio recorder to slate and sent to camera
+timecode is the adress for a frame of a film
+have the gain be as strong as possible at the beggining and maintain or reduce as it flows
+recorder cable boom headphones
+when purchasing opt for reliability so you dont buy a second time
+trust your ears.
