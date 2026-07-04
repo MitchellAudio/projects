@@ -3,11 +3,13 @@
 This folder tracks Netgear AV training, notes, and progress.  
 Certification info: [netgear.academy](https://www.netgear.academy)
 
-## Certification Levels
+## Certification Tracks
 
-- **Level 1:** Foundational networking knowledge for AV-over-IP (this folder)
-- **Level 2:** Advanced configurations and project implementation
-- **Level 3:** Large-scale deployment management
+| Certification | Focus | Notes File |
+|--------------|-------|-----------|
+| **AV Level 1** | Foundational networking for AV-over-IP | [AV Level 1/notes.md](AV%20Level%201/notes.md) |
+| **AV Level 2** | Advanced QoS, routing, security, AV protocols, troubleshooting | [AV Level 2/notes.md](AV%20Level%202/notes.md) |
+| **IPMX** | Open AV-over-IP standard (ST 2110, NMOS, PTP, JPEG-XS) | [IPMX/notes.md](IPMX/notes.md) |
 
 ## Level 1 Module Progress
 
@@ -24,5 +26,7 @@ Certification info: [netgear.academy](https://www.netgear.academy)
 
 ## Folder Structure
 
-- [AV Level 1](AV%20Level%201/) — Notes and guidebook PDF
+- [AV Level 1/](AV%20Level%201/) — Foundational AV networking + gap notes (jumbo frames, EEE, flow control)
+- [AV Level 2/](AV%20Level%202/) — Advanced multicast, QoS, Layer 3, security, AV protocol stacks, diagnostics
+- [IPMX/](IPMX/) — IPMX standard: ST 2110, NMOS, PTP, JPEG-XS, HDCP, network requirements
 

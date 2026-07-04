@@ -753,6 +753,36 @@ When specifying for a client:
 
 ---
 
+## Coverage Assessment — Will This Pass the Exam?
+
+> **Verdict: Yes, with the gaps below addressed.** The core proprietary content (IGMP Plus, Auto LAG, Auto Trunk, MLAG, Engage, switch lineup) is covered in depth. The networking fundamentals are solid from CCNA overlap. Three topics are under-covered and could appear on the exam:
+
+### Gaps to Know
+
+#### Jumbo Frames
+- Standard Ethernet MTU = **1500 bytes**
+- **Jumbo frames** extend the MTU to **9000 bytes** (sometimes 9216 bytes)
+- Required for: NDI, some ST 2110 and IPMX configurations, high-bandwidth AV-over-IP streams
+- Must be enabled **end-to-end** — every switch and NIC in the path must support and enable jumbo frames, or fragmentation/drops occur
+- On NETGEAR switches: configurable per interface or globally; Engage profiles handle this automatically for supported protocols
+- **Exam tip:** If asked why an NDI or high-res AV stream is dropping packets or showing artifacts, jumbo frame mismatch is a key suspect
+
+#### EEE — Energy Efficient Ethernet (IEEE 802.3az)
+- EEE reduces power on low-utilization links by entering a low-power idle (LPI) state
+- **This is catastrophically bad for AV networks** — the transition in/out of LPI introduces **latency jitter** (10–100+ µs) that causes audio clicks, video glitches, and Dante "blip" faults
+- **Rule: Always disable EEE on every port connected to AV devices**
+- On NETGEAR AV switches: EEE is disabled by default on AV-configured ports via Engage profiles
+- Engage Dante/AES67 profiles automatically set this correctly — another reason to use Engage rather than manual CLI
+
+#### Flow Control (IEEE 802.3x)
+- Flow control allows a receiving device to signal a sender to **pause transmission** when its buffer is nearly full
+- Prevents packet loss from buffer overflow
+- **For AV networks:** Standard flow control (PAUSE frames) can cause **head-of-line blocking** — a slow device pauses the whole link, stalling high-priority AV traffic
+- **Priority Flow Control (PFC)** — a per-queue version (part of the 802.1Qbb Data Center Bridging spec) — is preferred in high-density systems, though less commonly required in typical ProAV installs
+- **NETGEAR recommendation:** Disable standard flow control on AV ports; ensure QoS queuing is correctly configured so the switch drops low-priority traffic rather than pausing high-priority traffic
+
+---
+
 ## Exam Preparation Checklist
 
 - [ ] Can I list the 7 OSI layers and their AV relevance?
